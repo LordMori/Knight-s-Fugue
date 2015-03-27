@@ -14,7 +14,6 @@
 		31858DA51AC0C46000426C57 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DA41AC0C46000426C57 /* MainMenuViewController.m */; };
 		31858DA81AC0C46000426C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31858DA61AC0C46000426C57 /* Main.storyboard */; };
 		31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31858DA91AC0C46000426C57 /* Images.xcassets */; };
-		31858DB91AC0C46000426C57 /* Knight_s_FugueTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DB81AC0C46000426C57 /* Knight_s_FugueTests.m */; };
 		31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DC31AC0C90200426C57 /* QuestionnaireViewController.m */; };
 		31858DC71AC0D71000426C57 /* MoralityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DC61AC0D71000426C57 /* MoralityViewController.m */; };
 /* End PBXBuildFile section */
@@ -44,8 +43,6 @@
 		31858DA71AC0C46000426C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31858DA91AC0C46000426C57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		31858DB21AC0C46000426C57 /* Knight's FugueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Knight's FugueTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		31858DB71AC0C46000426C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		31858DB81AC0C46000426C57 /* Knight_s_FugueTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Knight_s_FugueTests.m; sourceTree = "<group>"; };
 		31858DC21AC0C90200426C57 /* QuestionnaireViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionnaireViewController.h; sourceTree = "<group>"; };
 		31858DC31AC0C90200426C57 /* QuestionnaireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionnaireViewController.m; sourceTree = "<group>"; };
 		31858DC51AC0D71000426C57 /* MoralityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoralityViewController.h; sourceTree = "<group>"; };
@@ -87,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				31858D9B1AC0C46000426C57 /* Knight's Fugue */,
-				31858DB51AC0C46000426C57 /* Knight's FugueTests */,
 				31858D9A1AC0C46000426C57 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -123,23 +119,6 @@
 			children = (
 				31858D9D1AC0C46000426C57 /* Info.plist */,
 				31858D9E1AC0C46000426C57 /* main.m */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		31858DB51AC0C46000426C57 /* Knight's FugueTests */ = {
-			isa = PBXGroup;
-			children = (
-				31858DB81AC0C46000426C57 /* Knight_s_FugueTests.m */,
-				31858DB61AC0C46000426C57 /* Supporting Files */,
-			);
-			path = "Knight's FugueTests";
-			sourceTree = "<group>";
-		};
-		31858DB61AC0C46000426C57 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				31858DB71AC0C46000426C57 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -257,7 +236,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31858DB91AC0C46000426C57 /* Knight_s_FugueTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
