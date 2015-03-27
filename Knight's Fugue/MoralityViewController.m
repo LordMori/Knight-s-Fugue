@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
+    SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
+    Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
+    NSLog(@"Class: %@", knight.class);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -24,14 +27,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)cancelUI_A:(id)sender {
+    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"cancelPressed"];
+    [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
 }
-*/
+
 
 @end

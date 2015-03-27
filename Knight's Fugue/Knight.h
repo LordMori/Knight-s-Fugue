@@ -10,4 +10,13 @@
 
 @interface Knight : NSObject
 
+@property NSString *name;
+@property NSString *class;
+@property NSNumber *strengthLvl;
+@property NSNumber *dexterityLvl;
+@property NSNumber *intelligenceLvl;
+
+- (id)initWithDictionary:(NSDictionary *)sgdDict;
+- (NSDictionary *)toDictionary;
+
 @end

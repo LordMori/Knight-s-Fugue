@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SavedGameData.h"
+#import "Knight.h"
 
 @interface MoralityViewController : UIViewController
 

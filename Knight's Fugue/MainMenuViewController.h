@@ -7,8 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SavedGameData.h"
+#import "Knight.h"
 
-@interface ViewController : UIViewController
+@interface MainMenuViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UIButton *loadGameUI_B;
+@property (weak, nonatomic) IBOutlet UILabel *savedGameLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *gameNewUI_B;
 
 
 @end

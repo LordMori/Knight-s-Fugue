@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SavedGameData.h"
+#import "Knight.h"
 
 @interface QuestionnaireViewController : UIViewController
+
+@property (weak, nonatomic) IBOutlet UILabel *questionLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *answer1UI_B;
+@property (weak, nonatomic) IBOutlet UIButton *answer2UI_B;
+@property (weak, nonatomic) IBOutlet UIButton *answer3UI_B;
 
 @end

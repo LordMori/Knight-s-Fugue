@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Knight.h"
 
 @interface SavedGameData : NSObject
+
+@property NSDate* saveDate;
+@property (retain) NSDictionary* knight;
+
+- (id)initWithDictionary:(NSDictionary *)sgdDict;
+- (NSDictionary *)toDictionary;
+
+- (void)resetSaveData;
 
 @end
