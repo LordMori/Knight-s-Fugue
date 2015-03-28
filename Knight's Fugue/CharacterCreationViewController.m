@@ -1,5 +1,5 @@
 //
-//  MoralityViewController.m
+//  CharacterCreationViewController.m
 //  Knight's Fugue
 //
 //  Created by Marc Becker on 3/23/15.
@@ -16,6 +16,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [Connector customizeBarButton:_cancelUI_B];
+    
     NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
     SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
     Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
@@ -25,6 +27,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (IBAction)cancelUI_A:(id)sender {

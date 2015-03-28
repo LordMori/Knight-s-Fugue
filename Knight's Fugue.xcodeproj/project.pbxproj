@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B41AC4F385007B58E1 /* SavedGameData.m */; };
 		313FC4B81AC4FA80007B58E1 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B71AC4FA80007B58E1 /* Knight.m */; };
+		3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */; };
+		3166DB001AC65A3D000E48D6 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3166DAFF1AC65A3D000E48D6 /* Connector.m */; };
 		31858D9F1AC0C46000426C57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858D9E1AC0C46000426C57 /* main.m */; };
 		31858DA21AC0C46000426C57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DA11AC0C46000426C57 /* AppDelegate.m */; };
 		31858DA51AC0C46000426C57 /* MainMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DA41AC0C46000426C57 /* MainMenuViewController.m */; };
@@ -23,6 +25,9 @@
 		313FC4B41AC4F385007B58E1 /* SavedGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGameData.m; sourceTree = "<group>"; };
 		313FC4B61AC4FA80007B58E1 /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
 		313FC4B71AC4FA80007B58E1 /* Knight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Knight.m; sourceTree = "<group>"; };
+		3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Knights Quest.ttf"; sourceTree = "<group>"; };
+		3166DAFE1AC65A3D000E48D6 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
+		3166DAFF1AC65A3D000E48D6 /* Connector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
 		31858D991AC0C46000426C57 /* Knight's Fugue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Knight's Fugue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31858D9D1AC0C46000426C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31858D9E1AC0C46000426C57 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,6 +67,15 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		3166DB011AC65A44000E48D6 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				3166DAFE1AC65A3D000E48D6 /* Connector.h */,
+				3166DAFF1AC65A3D000E48D6 /* Connector.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
 		31858D901AC0C46000426C57 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +101,7 @@
 				313FC4B41AC4F385007B58E1 /* SavedGameData.m */,
 				313FC4B61AC4FA80007B58E1 /* Knight.h */,
 				313FC4B71AC4FA80007B58E1 /* Knight.m */,
+				3166DB011AC65A44000E48D6 /* Utility */,
 				313FC4B91AC4FA8D007B58E1 /* View Controllers */,
 				31858DA61AC0C46000426C57 /* Main.storyboard */,
 				31858DA91AC0C46000426C57 /* Images.xcassets */,
@@ -99,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				31858D9D1AC0C46000426C57 /* Info.plist */,
+				3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */,
 				31858D9E1AC0C46000426C57 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -162,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31858DA81AC0C46000426C57 /* Main.storyboard in Resources */,
+				3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */,
 				31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31858DA51AC0C46000426C57 /* MainMenuViewController.m in Sources */,
+				3166DB001AC65A3D000E48D6 /* Connector.m in Sources */,
 				31858DA21AC0C46000426C57 /* AppDelegate.m in Sources */,
 				313FC4B81AC4FA80007B58E1 /* Knight.m in Sources */,
 				31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */,

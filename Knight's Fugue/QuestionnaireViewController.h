@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Connector.h"
 #import "SavedGameData.h"
 #import "Knight.h"
 
@@ -17,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *answer1UI_B;
 @property (weak, nonatomic) IBOutlet UIButton *answer2UI_B;
 @property (weak, nonatomic) IBOutlet UIButton *answer3UI_B;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelUI_B;
 
 @end

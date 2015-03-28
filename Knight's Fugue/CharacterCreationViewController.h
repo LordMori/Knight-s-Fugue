@@ -1,5 +1,5 @@
 //
-//  MoralityViewController.h
+//  CharacterCreationViewController.h
 //  Knight's Fugue
 //
 //  Created by Marc Becker on 3/23/15.
@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Connector.h"
 #import "SavedGameData.h"
 #import "Knight.h"
 
 @interface CharacterCreationViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelUI_B;
 
 @end

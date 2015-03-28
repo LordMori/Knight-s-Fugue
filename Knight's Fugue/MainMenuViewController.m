@@ -26,6 +26,11 @@
     }
 }
 
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 - (void)viewWillAppear:(BOOL)animated{
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"cancelPressed"]){
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"cancelPressed"];

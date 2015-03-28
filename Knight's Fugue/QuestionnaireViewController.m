@@ -44,6 +44,8 @@ int numberOfMoralityQs;
     
     [self createQuestionAndAnswerDicts];
     
+    [Connector customizeBarButton:_cancelUI_B];
+    
     classQuestionKeys = [[classQuestions allKeys] mutableCopy];
     moralityQuestionKeys = [[moralityQuestions allKeys] mutableCopy];
     
@@ -58,6 +60,11 @@ int numberOfMoralityQs;
     numberOfMoralityQs = 0;
     
     [self createQuestionAndAnswers];
+}
+
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -91,7 +98,6 @@ int numberOfMoralityQs;
 
 - (void)createQuestionAndAnswers{
     NSLog(@"%@",[NSString stringWithFormat:@"rogue: %d\nmage: %d\nberserker: %d\ngood: %d\nneutral: %d\nevil: %d",chosenRogueAnswers,chosenMageAnswers,chosenBerserkerAnswers,chosenGoodAnswers,chosenNeutralAnswers,chosenEvilAnswers]);
-    
     
     int qSelection = arc4random_uniform(2);
     
@@ -140,7 +146,7 @@ int numberOfMoralityQs;
         }
         
         [classQuestionKeys removeObject:key];
-        
+
     }else if((qSelection == 1 && numberOfMoralityQs <= 5 && numberOfClassQs != 11) || (numberOfClassQs > 10 && numberOfMoralityQs < 5)){
         int random = arc4random()%[moralityQuestionKeys count];
         NSString *key = [moralityQuestionKeys objectAtIndex:random];
@@ -227,15 +233,15 @@ int numberOfMoralityQs;
 }
 
 - (IBAction)answer1UI_A:(id)sender {
-    [self checkButton:sender];
+    [self checkButton:_answer1UI_B];
 }
 
 - (IBAction)answer2UI_A:(id)sender {
-    [self checkButton:sender];
+    [self checkButton:_answer2UI_B];
 }
 
 - (IBAction)answer3UI_A:(id)sender {
-    [self checkButton:sender];
+    [self checkButton:_answer3UI_B];
 }
 
 - (void) checkButton: (UIButton*)button{
