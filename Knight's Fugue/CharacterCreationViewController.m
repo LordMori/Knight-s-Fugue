@@ -6,13 +6,13 @@
 //  Copyright (c) 2015 Marc Becker. All rights reserved.
 //
 
-#import "MoralityViewController.h"
+#import "CharacterCreationViewController.h"
 
-@interface MoralityViewController ()
+@interface CharacterCreationViewController ()
 
 @end
 
-@implementation MoralityViewController
+@implementation CharacterCreationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

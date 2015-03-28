@@ -408,20 +408,20 @@
                                 <exclude reference="LBc-TI-Vpf"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="2CK-23-Oso"/>
-                                <exclude reference="bze-CH-FYG"/>
                                 <exclude reference="7Zd-vS-SrY"/>
                                 <exclude reference="8vA-7T-eys"/>
                                 <exclude reference="Xj2-Xg-w6l"/>
-                                <exclude reference="Szr-1R-Nen"/>
-                                <exclude reference="dbo-TQ-4ki"/>
-                                <exclude reference="qhY-06-h2b"/>
-                                <exclude reference="XcR-cI-jWu"/>
-                                <exclude reference="aYU-DP-sgC"/>
-                                <exclude reference="js2-ud-G5Q"/>
                                 <exclude reference="MKV-mo-gDc"/>
                                 <exclude reference="dQV-gN-J2e"/>
                                 <exclude reference="tKa-Sg-uaW"/>
+                                <exclude reference="XcR-cI-jWu"/>
+                                <exclude reference="aYU-DP-sgC"/>
+                                <exclude reference="js2-ud-G5Q"/>
+                                <exclude reference="Szr-1R-Nen"/>
+                                <exclude reference="dbo-TQ-4ki"/>
+                                <exclude reference="qhY-06-h2b"/>
+                                <exclude reference="2CK-23-Oso"/>
+                                <exclude reference="bze-CH-FYG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -433,20 +433,20 @@
                                 <include reference="LBc-TI-Vpf"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="2CK-23-Oso"/>
-                                <include reference="bze-CH-FYG"/>
                                 <include reference="7Zd-vS-SrY"/>
                                 <include reference="8vA-7T-eys"/>
                                 <include reference="Xj2-Xg-w6l"/>
-                                <include reference="Szr-1R-Nen"/>
-                                <include reference="dbo-TQ-4ki"/>
-                                <include reference="qhY-06-h2b"/>
-                                <include reference="XcR-cI-jWu"/>
-                                <include reference="aYU-DP-sgC"/>
-                                <include reference="js2-ud-G5Q"/>
                                 <include reference="MKV-mo-gDc"/>
                                 <include reference="dQV-gN-J2e"/>
                                 <include reference="tKa-Sg-uaW"/>
+                                <include reference="XcR-cI-jWu"/>
+                                <include reference="aYU-DP-sgC"/>
+                                <include reference="js2-ud-G5Q"/>
+                                <include reference="Szr-1R-Nen"/>
+                                <include reference="dbo-TQ-4ki"/>
+                                <include reference="qhY-06-h2b"/>
+                                <include reference="2CK-23-Oso"/>
+                                <include reference="bze-CH-FYG"/>
                             </mask>
                         </variation>
                     </view>
@@ -455,17 +455,17 @@
                         <outlet property="answer2UI_B" destination="OGO-R1-p1e" id="Qdw-Il-jAt"/>
                         <outlet property="answer3UI_B" destination="Ebv-Sg-9af" id="1h1-Hr-IfB"/>
                         <outlet property="questionLabel" destination="BLp-d9-Qoe" id="MFR-ep-Ua4"/>
-                        <segue destination="sVR-gN-0eU" kind="show" identifier="showMorality" id="Z6h-zQ-fRD"/>
+                        <segue destination="sVR-gN-0eU" kind="show" identifier="showCharacterCreation" id="Z6h-zQ-fRD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMC-g1-gMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1074" y="336.75"/>
         </scene>
-        <!--Morality View Controller-->
+        <!--Character Creation View Controller-->
         <scene sceneID="A68-eK-Cia">
             <objects>
-                <viewController id="sVR-gN-0eU" customClass="MoralityViewController" sceneMemberID="viewController">
+                <viewController id="sVR-gN-0eU" customClass="CharacterCreationViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nbs-YM-zbE"/>
                         <viewControllerLayoutGuide type="bottom" id="GsA-bH-OJH"/>

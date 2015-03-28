@@ -10,6 +10,6 @@
 #import "SavedGameData.h"
 #import "Knight.h"
 
-@interface MoralityViewController : UIViewController
+@interface CharacterCreationViewController : UIViewController
 
 @end

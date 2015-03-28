@@ -15,18 +15,8 @@
 		31858DA81AC0C46000426C57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31858DA61AC0C46000426C57 /* Main.storyboard */; };
 		31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31858DA91AC0C46000426C57 /* Images.xcassets */; };
 		31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DC31AC0C90200426C57 /* QuestionnaireViewController.m */; };
-		31858DC71AC0D71000426C57 /* MoralityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DC61AC0D71000426C57 /* MoralityViewController.m */; };
+		31858DC71AC0D71000426C57 /* CharacterCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DC61AC0D71000426C57 /* CharacterCreationViewController.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		31858DB31AC0C46000426C57 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 31858D911AC0C46000426C57 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 31858D981AC0C46000426C57;
-			remoteInfo = "Knight's Fugue";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		313FC4B31AC4F385007B58E1 /* SavedGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGameData.h; sourceTree = "<group>"; };
@@ -42,22 +32,14 @@
 		31858DA41AC0C46000426C57 /* MainMenuViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainMenuViewController.m; sourceTree = "<group>"; };
 		31858DA71AC0C46000426C57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31858DA91AC0C46000426C57 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		31858DB21AC0C46000426C57 /* Knight's FugueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Knight's FugueTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		31858DC21AC0C90200426C57 /* QuestionnaireViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionnaireViewController.h; sourceTree = "<group>"; };
 		31858DC31AC0C90200426C57 /* QuestionnaireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionnaireViewController.m; sourceTree = "<group>"; };
-		31858DC51AC0D71000426C57 /* MoralityViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MoralityViewController.h; sourceTree = "<group>"; };
-		31858DC61AC0D71000426C57 /* MoralityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoralityViewController.m; sourceTree = "<group>"; };
+		31858DC51AC0D71000426C57 /* CharacterCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationViewController.h; sourceTree = "<group>"; };
+		31858DC61AC0D71000426C57 /* CharacterCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		31858D961AC0C46000426C57 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31858DAF1AC0C46000426C57 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -70,8 +52,8 @@
 		313FC4B91AC4FA8D007B58E1 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				31858DC51AC0D71000426C57 /* MoralityViewController.h */,
-				31858DC61AC0D71000426C57 /* MoralityViewController.m */,
+				31858DC51AC0D71000426C57 /* CharacterCreationViewController.h */,
+				31858DC61AC0D71000426C57 /* CharacterCreationViewController.m */,
 				31858DC21AC0C90200426C57 /* QuestionnaireViewController.h */,
 				31858DC31AC0C90200426C57 /* QuestionnaireViewController.m */,
 				31858DA31AC0C46000426C57 /* MainMenuViewController.h */,
@@ -92,7 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				31858D991AC0C46000426C57 /* Knight's Fugue.app */,
-				31858DB21AC0C46000426C57 /* Knight's FugueTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,24 +124,6 @@
 			productReference = 31858D991AC0C46000426C57 /* Knight's Fugue.app */;
 			productType = "com.apple.product-type.application";
 		};
-		31858DB11AC0C46000426C57 /* Knight's FugueTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 31858DBF1AC0C46000426C57 /* Build configuration list for PBXNativeTarget "Knight's FugueTests" */;
-			buildPhases = (
-				31858DAE1AC0C46000426C57 /* Sources */,
-				31858DAF1AC0C46000426C57 /* Frameworks */,
-				31858DB01AC0C46000426C57 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				31858DB41AC0C46000426C57 /* PBXTargetDependency */,
-			);
-			name = "Knight's FugueTests";
-			productName = "Knight's FugueTests";
-			productReference = 31858DB21AC0C46000426C57 /* Knight's FugueTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -172,10 +135,6 @@
 				TargetAttributes = {
 					31858D981AC0C46000426C57 = {
 						CreatedOnToolsVersion = 6.2;
-					};
-					31858DB11AC0C46000426C57 = {
-						CreatedOnToolsVersion = 6.2;
-						TestTargetID = 31858D981AC0C46000426C57;
 					};
 				};
 			};
@@ -193,7 +152,6 @@
 			projectRoot = "";
 			targets = (
 				31858D981AC0C46000426C57 /* Knight's Fugue */,
-				31858DB11AC0C46000426C57 /* Knight's FugueTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +163,6 @@
 			files = (
 				31858DA81AC0C46000426C57 /* Main.storyboard in Resources */,
 				31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31858DB01AC0C46000426C57 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,26 +179,11 @@
 				31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */,
 				313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */,
 				31858D9F1AC0C46000426C57 /* main.m in Sources */,
-				31858DC71AC0D71000426C57 /* MoralityViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		31858DAE1AC0C46000426C57 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				31858DC71AC0D71000426C57 /* CharacterCreationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		31858DB41AC0C46000426C57 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 31858D981AC0C46000426C57 /* Knight's Fugue */;
-			targetProxy = 31858DB31AC0C46000426C57 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		31858DA61AC0C46000426C57 /* Main.storyboard */ = {
@@ -359,40 +295,6 @@
 			};
 			name = Release;
 		};
-		31858DC01AC0C46000426C57 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Knight's FugueTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knight's Fugue.app/Knight's Fugue";
-			};
-			name = Debug;
-		};
-		31858DC11AC0C46000426C57 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Knight's FugueTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Knight's Fugue.app/Knight's Fugue";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -410,15 +312,6 @@
 			buildConfigurations = (
 				31858DBD1AC0C46000426C57 /* Debug */,
 				31858DBE1AC0C46000426C57 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		31858DBF1AC0C46000426C57 /* Build configuration list for PBXNativeTarget "Knight's FugueTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				31858DC01AC0C46000426C57 /* Debug */,
-				31858DC11AC0C46000426C57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
