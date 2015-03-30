@@ -13,7 +13,7 @@
 + (void)customizeBarButton:(UIBarButtonItem*)bbt{
     NSDictionary* barButtonItemAttributes =
     @{NSFontAttributeName:
-          [UIFont fontWithName:@"Knights Quest" size:20.0f],
+          [UIFont fontWithName:@"Planewalker" size:20.0f],
       NSForegroundColorAttributeName:
           [UIColor whiteColor]
       };

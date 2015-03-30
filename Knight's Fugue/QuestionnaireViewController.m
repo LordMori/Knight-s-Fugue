@@ -187,10 +187,12 @@ int numberOfMoralityQs;
         double roguePercentage = (chosenRogueAnswers/10.0)*100.0;
         double magePercentage = (chosenMageAnswers/10.0)*100.0;
         double berserkerPercentage = (chosenBerserkerAnswers/10.0)*100.0;
+        NSString *classString = @"";
         
         double goodPercentage = (chosenGoodAnswers/5.0)*100.0;
         double neutralPercentage = (chosenNeutralAnswers/5.0)*100.0;
         double evilPercentage = (chosenEvilAnswers/5.0)*100.0;
+        NSString *moralityString = @"";
                 
         NSLog(@"rogue: %f\nmage: %f\nberserker: %f\n\ngood: %f\nneutral: %f\nevil: %f",roguePercentage,magePercentage,berserkerPercentage,goodPercentage,neutralPercentage,evilPercentage);
 
@@ -199,36 +201,46 @@ int numberOfMoralityQs;
             
             if(roguePercentage == 40.0){
                 if(random == 1){
-                    [self saveGame:@"assassin"];
+                    classString = @"assassin";
                 }else{
-                    [self saveGame:@"warrior"];
+                    classString = @"warrior";
                 }
             }else if(magePercentage == 40.0){
                 if(random == 1){
-                    [self saveGame:@"assassin"];
+                    classString = @"assassin";
                 }else{
-                    [self saveGame:@"templar"];
+                    classString = @"templar";
                 }
             }else if(berserkerPercentage == 40.0){
                 if(random == 1){
-                    [self saveGame:@"warrior"];
+                    classString = @"warrior";
                 }else{
-                    [self saveGame:@"templar"];
+                    classString = @"templar";
                 }
             }
         }else if(roguePercentage >= 66.0){
-            [self saveGame:@"rogue"];
+            classString = @"rogue";
         }else if(magePercentage >= 66.0){
-            [self saveGame:@"mage"];
+            classString = @"mage";
         }else if(berserkerPercentage >= 66.0){
-            [self saveGame:@"berserker"];
+            classString = @"berserker";
         }else if(roguePercentage >= 33.0 && magePercentage >= 33.0){
-            [self saveGame:@"assassin"];
+            classString = @"assassin";
         }else if(roguePercentage >= 33.0 && berserkerPercentage >= 33.0){
-            [self saveGame:@"warrior"];
+            classString = @"warrior";
         }else{
-            [self saveGame:@"templar"];
+            classString = @"templar";
         }
+        
+        if(goodPercentage >= 50.0){
+            moralityString = @"good";
+        }else if(evilPercentage >= 50.0){
+            moralityString = @"evil";
+        }else{
+            moralityString = @"neutral";
+        }
+        
+        [self saveGame:classString morality:moralityString];
     }
 }
 
@@ -269,12 +281,14 @@ int numberOfMoralityQs;
     if(incremented == true){
         [self createQuestionAndAnswers];
     }
+
 }
 
-- (void) saveGame:(NSString*)class{
+- (void) saveGame:(NSString*)class morality:(NSString*)morality{
     SavedGameData *sgd = [[SavedGameData alloc] init];
     Knight *knight = [[Knight alloc] init];
     knight.class = class;
+    knight.morality = morality;
     
     sgd.knight = [knight toDictionary];
     sgd.saveDate = [NSDate date];

@@ -6,15 +6,15 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="Knights Quest.ttf">
-            <string>KnightsQuest</string>
-            <string>KnightsQuest</string>
-            <string>KnightsQuest</string>
-            <string>KnightsQuest</string>
-            <string>KnightsQuest</string>
-            <string>KnightsQuest</string>
-            <string>KnightsQuest</string>
-            <string>KnightsQuest</string>
+        <mutableArray key="Planewalker.otf">
+            <string>Planewalker</string>
+            <string>Planewalker</string>
+            <string>Planewalker</string>
+            <string>Planewalker</string>
+            <string>Planewalker</string>
+            <string>Planewalker</string>
+            <string>Planewalker</string>
+            <string>Planewalker</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -38,7 +38,7 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="308" id="djD-to-TXh"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="33"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="33"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -67,7 +67,7 @@
                                     </constraint>
                                     <constraint firstAttribute="width" constant="308" id="xmN-Bo-20X"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="33"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="33"/>
                                 <state key="normal" title="Load Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -94,7 +94,7 @@
                                     <constraint firstAttribute="width" constant="308" id="Buu-sZ-6bi"/>
                                     <constraint firstAttribute="height" constant="21" id="aap-Hm-2uk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -116,7 +116,7 @@
                                     <constraint firstAttribute="height" constant="97" id="onu-rP-l5d"/>
                                     <constraint firstAttribute="width" constant="368" id="t57-qs-e5T"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="60"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="60"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -262,7 +262,7 @@
                                     <constraint firstAttribute="height" constant="194" id="Nya-zK-dSW"/>
                                     <constraint firstAttribute="width" constant="368" id="q5v-M4-HCd"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="45"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="45"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
@@ -284,7 +284,7 @@
                                     <constraint firstAttribute="height" constant="30" id="441-kl-SXs"/>
                                     <constraint firstAttribute="width" constant="368" id="LTW-LP-Waf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="25"/>
                                 <state key="normal" title="Answer2">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -311,7 +311,7 @@
                                     <constraint firstAttribute="height" constant="30" id="AHT-BC-tF9"/>
                                     <constraint firstAttribute="width" constant="368" id="hhD-x8-6uE"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="25"/>
                                 <state key="normal" title="Answer1">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,7 +338,7 @@
                                     <constraint firstAttribute="width" constant="368" id="ZYn-FS-YaV"/>
                                     <constraint firstAttribute="height" constant="30" id="xoC-ed-epY"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="KnightsQuest" family="Knights Quest" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Planewalker" family="Planewalker" pointSize="25"/>
                                 <state key="normal" title="Answer3">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>

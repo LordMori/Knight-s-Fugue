@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+//The user's character
 @interface Knight : NSObject
 
 @property NSString *name;
 @property NSString *class;
+@property NSString *morality;
 @property NSNumber *strengthLvl;
 @property NSNumber *dexterityLvl;
 @property NSNumber *intelligenceLvl;

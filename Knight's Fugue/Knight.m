@@ -15,6 +15,7 @@
     if (self) {
         self.name = knightDict[@"name"];
         self.class = knightDict[@"class"];
+        self.morality = knightDict[@"morality"];
         self.dexterityLvl = knightDict[@"dexLvl"];
         self.intelligenceLvl = knightDict[@"intLvl"];
         self.strengthLvl = knightDict[@"strLvl"];
@@ -29,6 +30,9 @@
     if(self.class == nil){
         self.class = @"";
     }
+    if(self.morality == nil){
+        self.morality = @"";
+    }
     if(self.dexterityLvl == nil){
         self.dexterityLvl = @0;
     }
@@ -42,6 +46,7 @@
     return @{
              @"name": self.name,
              @"class": self.class,
+             @"morality": self.morality,
              @"dexLvl": self.dexterityLvl,
              @"strLvl": self.intelligenceLvl,
              @"intLvl": self.strengthLvl

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3122159E1AC91AAE0095086A /* Modern Serif Eroded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3122159D1AC91AAE0095086A /* Modern Serif Eroded.ttf */; };
+		312215A01AC91BD20095086A /* Planewalker.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3122159F1AC91BD20095086A /* Planewalker.otf */; };
 		313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B41AC4F385007B58E1 /* SavedGameData.m */; };
 		313FC4B81AC4FA80007B58E1 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B71AC4FA80007B58E1 /* Knight.m */; };
 		3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */; };
@@ -21,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3122159D1AC91AAE0095086A /* Modern Serif Eroded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Modern Serif Eroded.ttf"; path = "../Modern Serif Eroded.ttf"; sourceTree = "<group>"; };
+		3122159F1AC91BD20095086A /* Planewalker.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Planewalker.otf; path = ../Planewalker.otf; sourceTree = "<group>"; };
 		313FC4B31AC4F385007B58E1 /* SavedGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGameData.h; sourceTree = "<group>"; };
 		313FC4B41AC4F385007B58E1 /* SavedGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGameData.m; sourceTree = "<group>"; };
 		313FC4B61AC4FA80007B58E1 /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
@@ -113,8 +117,10 @@
 		31858D9C1AC0C46000426C57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				31858D9D1AC0C46000426C57 /* Info.plist */,
+				3122159F1AC91BD20095086A /* Planewalker.otf */,
+				3122159D1AC91AAE0095086A /* Modern Serif Eroded.ttf */,
 				3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */,
+				31858D9D1AC0C46000426C57 /* Info.plist */,
 				31858D9E1AC0C46000426C57 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -177,6 +183,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3122159E1AC91AAE0095086A /* Modern Serif Eroded.ttf in Resources */,
+				312215A01AC91BD20095086A /* Planewalker.otf in Resources */,
 				31858DA81AC0C46000426C57 /* Main.storyboard in Resources */,
 				3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */,
 				31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */,

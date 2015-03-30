@@ -21,7 +21,7 @@
     NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
     SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
     Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
-    NSLog(@"Class: %@", knight.class);
+    NSLog(@"Class: %@\nMorality: %@", knight.class, knight.morality);
 }
 
 - (void)didReceiveMemoryWarning {
