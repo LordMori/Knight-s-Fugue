@@ -10,6 +10,12 @@
 #import "Connector.h"
 #import "SavedGameData.h"
 #import "Knight.h"
+#import "BerserkerClass.h"
+#import "RogueClass.h"
+#import "MageClass.h"
+#import "AssassinClass.h"
+#import "WarriorClass.h"
+#import "TemplarClass.h"
 
 @interface QuestionnaireViewController : UIViewController
 

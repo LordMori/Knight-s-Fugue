@@ -11,6 +11,14 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
+         contextName = "-[CharacterCreationOverviewViewController labelTapped:]:CharacterCreationOverviewViewController.m">
+         <PersistentStrings>
+            <PersistentString
+               value = "[tappedLabel.text substringToIndex:3]">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "-[QuestionnaireViewController saveGame:]:QuestionnaireViewController.m">
       </ContextState>
    </ContextStates>

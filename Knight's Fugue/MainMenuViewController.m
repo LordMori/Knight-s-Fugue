@@ -35,6 +35,14 @@
     if([[NSUserDefaults standardUserDefaults] boolForKey:@"cancelPressed"]){
         [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"cancelPressed"];
     }
+    
+    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
+    SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
+    Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
+    
+    if(sgd != nil && knight != nil){
+        _savedGameLabel.text = [NSString stringWithFormat:@"Class: %@  Save Time: %@",[knight.class capitalizedString], sgd.saveDate];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,10 +50,11 @@
     // Dispose of any resources that can be recreated.
 }
 - (IBAction)loadGameUI_A:(id)sender {
+    [self performSegueWithIdentifier:@"showLoadGame" sender:sender];
 }
 
 - (IBAction)gameNewUI_A:(id)sender {
-    [self performSegueWithIdentifier:@"showQuestionnaire" sender:sender];
+    [self performSegueWithIdentifier:@"showQuestionnaire" sender:nil];
 }
 
 

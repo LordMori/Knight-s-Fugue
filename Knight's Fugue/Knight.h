@@ -17,6 +17,13 @@
 @property NSNumber *strengthLvl;
 @property NSNumber *dexterityLvl;
 @property NSNumber *intelligenceLvl;
+@property NSNumber *healthLvl;
+@property NSNumber *hitpointsLvl;
+@property NSNumber *willpowerLvl;
+@property NSNumber *perception;
+@property NSNumber *fatigueLvl;
+@property NSNumber *moveLvl;
+@property NSNumber *speedLvl;
 
 - (id)initWithDictionary:(NSDictionary *)sgdDict;
 - (NSDictionary *)toDictionary;

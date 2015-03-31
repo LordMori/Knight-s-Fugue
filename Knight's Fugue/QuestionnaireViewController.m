@@ -46,6 +46,8 @@ int numberOfMoralityQs;
     
     [Connector customizeBarButton:_cancelUI_B];
     
+    [self chooseCreationMode];
+    
     classQuestionKeys = [[classQuestions allKeys] mutableCopy];
     moralityQuestionKeys = [[moralityQuestions allKeys] mutableCopy];
     
@@ -59,7 +61,7 @@ int numberOfMoralityQs;
     chosenEvilAnswers = 0;
     numberOfMoralityQs = 0;
     
-    [self createQuestionAndAnswers];
+    //[self createQuestionAndAnswers];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -76,6 +78,14 @@ int numberOfMoralityQs;
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)chooseCreationMode{
+    _questionLabel.text = @"Manual or Questionnaire?";
+    [_answer1UI_B setTitle:@"Manual" forState:UIControlStateNormal];
+    [_answer2UI_B setTitle:@"Questionnaire" forState:UIControlStateNormal];
+    _answer3UI_B.hidden = true;
+    _answer3UI_B.enabled = false;
 }
 
 - (void)createQuestionAndAnswerDicts{
@@ -99,15 +109,15 @@ int numberOfMoralityQs;
 - (void)createQuestionAndAnswers{
     NSLog(@"%@",[NSString stringWithFormat:@"rogue: %d\nmage: %d\nberserker: %d\ngood: %d\nneutral: %d\nevil: %d",chosenRogueAnswers,chosenMageAnswers,chosenBerserkerAnswers,chosenGoodAnswers,chosenNeutralAnswers,chosenEvilAnswers]);
     
-    int qSelection = arc4random_uniform(2);
+    int qSelection = arc4random_uniform(100);
     
-    if(qSelection == 0){
+    if(qSelection > 33){
         if(numberOfClassQs<=10){
             numberOfClassQs++;
         }else{
             numberOfMoralityQs++;
         }
-    }else if(qSelection == 1){
+    }else if(qSelection <= 33){
         if(numberOfMoralityQs<=5){
             numberOfMoralityQs++;
         }else{
@@ -117,7 +127,7 @@ int numberOfMoralityQs;
     
     NSLog(@"Number of class Qs: %d\nNumber of morality Qs: %d",numberOfClassQs,numberOfMoralityQs);
 
-    if((qSelection == 0 && numberOfClassQs <= 10 && numberOfMoralityQs != 6) || (numberOfMoralityQs > 5 && numberOfClassQs < 10)){
+    if((qSelection > 33 && numberOfClassQs <= 10 && numberOfMoralityQs != 6) || (numberOfMoralityQs > 5 && numberOfClassQs < 10)){
         int random = arc4random()%[classQuestionKeys count];
         NSString *key = [classQuestionKeys objectAtIndex:random];
         
@@ -147,7 +157,7 @@ int numberOfMoralityQs;
         
         [classQuestionKeys removeObject:key];
 
-    }else if((qSelection == 1 && numberOfMoralityQs <= 5 && numberOfClassQs != 11) || (numberOfClassQs > 10 && numberOfMoralityQs < 5)){
+    }else if((qSelection <= 33 && numberOfMoralityQs <= 5 && numberOfClassQs != 11) || (numberOfClassQs > 10 && numberOfMoralityQs < 5)){
         int random = arc4random()%[moralityQuestionKeys count];
         NSString *key = [moralityQuestionKeys objectAtIndex:random];
         
@@ -224,18 +234,24 @@ int numberOfMoralityQs;
             classString = @"mage";
         }else if(berserkerPercentage >= 66.0){
             classString = @"berserker";
-        }else if(roguePercentage >= 33.0 && magePercentage >= 33.0){
+        }else if((roguePercentage >= 33.0 && magePercentage >= 30.0) || (roguePercentage >= 30.0 && magePercentage >= 33.0)){
             classString = @"assassin";
-        }else if(roguePercentage >= 33.0 && berserkerPercentage >= 33.0){
+        }else if((roguePercentage >= 33.0 && berserkerPercentage >= 30.0) || (roguePercentage >= 30.0 && berserkerPercentage >= 33.0)){
             classString = @"warrior";
         }else{
             classString = @"templar";
         }
         
-        if(goodPercentage >= 50.0){
+        if(goodPercentage >= 100){
+            moralityString = @"maxGood";
+        }else if(goodPercentage >= 50.0){
             moralityString = @"good";
+        }else if(evilPercentage >= 100){
+            moralityString = @"maxEvil";
         }else if(evilPercentage >= 50.0){
             moralityString = @"evil";
+        }else if(neutralPercentage >= 100){
+            moralityString = @"maxNeutral";
         }else{
             moralityString = @"neutral";
         }
@@ -258,6 +274,15 @@ int numberOfMoralityQs;
 
 - (void) checkButton: (UIButton*)button{
     bool incremented = false;
+    
+    if([button.titleLabel.text isEqualToString:@"Manual"]){
+        NSLog(@"Manual Segue");
+    }else if([button.titleLabel.text isEqualToString:@"Questionnaire"]){
+        [self createQuestionAndAnswers];
+        _answer3UI_B.hidden = false;
+        _answer3UI_B.enabled = true;
+    }
+    
     if([button.titleLabel.text isEqualToString:[rogueAnswers objectForKey:currentQuestion]]){
         chosenRogueAnswers++;
         incremented = true;
@@ -286,8 +311,21 @@ int numberOfMoralityQs;
 
 - (void) saveGame:(NSString*)class morality:(NSString*)morality{
     SavedGameData *sgd = [[SavedGameData alloc] init];
-    Knight *knight = [[Knight alloc] init];
-    knight.class = class;
+    Knight *knight;
+    if([class isEqualToString:@"berserker"]){
+        knight = [[BerserkerClass alloc] init];
+    }else if([class isEqualToString:@"rogue"]){
+        knight = [[RogueClass alloc] init];
+    }else if([class isEqualToString:@"mage"]){
+        knight = [[MageClass alloc]init];
+    }else if([class isEqualToString:@"assassin"]){
+        knight = [[AssassinClass alloc]init];
+    }else if([class isEqualToString:@"warrior"]){
+        knight = [[WarriorClass alloc]init];
+    }else if([class isEqualToString:@"templar"]){
+        knight = [[TemplarClass alloc]init];
+    }
+
     knight.morality = morality;
     
     sgd.knight = [knight toDictionary];

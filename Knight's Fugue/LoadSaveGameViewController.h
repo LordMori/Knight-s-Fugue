@@ -1,8 +1,8 @@
 //
-//  CharacterCreationViewController.h
+//  LoadSaveGameViewController.h
 //  Knight's Fugue
 //
-//  Created by Marc Becker on 3/23/15.
+//  Created by Marc Becker on 3/30/15.
 //  Copyright (c) 2015 Marc Becker. All rights reserved.
 //
 
@@ -11,7 +11,8 @@
 #import "SavedGameData.h"
 #import "Knight.h"
 
-@interface CharacterCreationViewController : UIViewController
+@interface LoadSaveGameViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelUI_B;
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *loadUI_B;
 
 @end
