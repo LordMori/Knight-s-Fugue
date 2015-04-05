@@ -10,14 +10,18 @@
 
 @implementation CharacterCreationStatsViewController
 
+SavedGameData *sgd;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [Connector customizeBarButton:_cancelUI_B];
-    [Connector customizeBarButton:_createUI_B];
+    self.tabBarController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(popToRootView)];
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create" style:UIBarButtonItemStylePlain target:self action:@selector(createNewGame)];
+    [Connector customizeBarButton:self.tabBarController.navigationItem.leftBarButtonItem];
+    [Connector customizeBarButton:self.tabBarController.navigationItem.rightBarButtonItem];
     
-    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
-    SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
+    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedSGD"];
+    sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
     Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
     NSLog(@"Class: %@\nMorality: %@", knight.class, knight.morality);
 }
@@ -27,15 +31,15 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
-}
-- (IBAction)createUI_A:(id)sender {
+- (void)popToRootView{
+    [Connector createAlertController:self title:@"Cancel Character Creation?" message:@"All data will be lost if cancelled"];
 }
 
-- (IBAction)cancelUI_A:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"cancelPressed"];
-    [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
+- (void)createNewGame {
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"gameSaved"];
+    [[NSUserDefaults standardUserDefaults] setObject:[sgd toDictionary] forKey:@"savedGame"];
+    
+    NSLog(@"Create New Game");
 }
 
 @end

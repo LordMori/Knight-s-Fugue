@@ -8,12 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Connector.h"
-#import "SavedGameData.h"
-#import "Knight.h"
 
 @interface CharacterCreationOverviewViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelUI_B;
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *createUI_B;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moralityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *classLabel;

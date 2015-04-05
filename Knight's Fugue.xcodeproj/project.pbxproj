@@ -150,6 +150,25 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		31EE9D6B1AD06813004735E2 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				31FA00961ACA27100079A4E1 /* RogueClass.h */,
+				31FA00971ACA27100079A4E1 /* RogueClass.m */,
+				31FA009A1ACA2A590079A4E1 /* BerserkerClass.h */,
+				31FA009B1ACA2A590079A4E1 /* BerserkerClass.m */,
+				31FA009D1ACA33500079A4E1 /* MageClass.h */,
+				31FA009E1ACA33500079A4E1 /* MageClass.m */,
+				31FA00A01ACA340A0079A4E1 /* AssassinClass.h */,
+				31FA00A11ACA340A0079A4E1 /* AssassinClass.m */,
+				31FA00A31ACA34220079A4E1 /* WarriorClass.h */,
+				31FA00A41ACA34220079A4E1 /* WarriorClass.m */,
+				31FA00A61ACA342F0079A4E1 /* TemplarClass.h */,
+				31FA00A71ACA342F0079A4E1 /* TemplarClass.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		31FA00921AC9FAEA0079A4E1 /* CharacterCreation */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,18 +185,7 @@
 			children = (
 				313FC4B61AC4FA80007B58E1 /* Knight.h */,
 				313FC4B71AC4FA80007B58E1 /* Knight.m */,
-				31FA00961ACA27100079A4E1 /* RogueClass.h */,
-				31FA00971ACA27100079A4E1 /* RogueClass.m */,
-				31FA009A1ACA2A590079A4E1 /* BerserkerClass.h */,
-				31FA009B1ACA2A590079A4E1 /* BerserkerClass.m */,
-				31FA009D1ACA33500079A4E1 /* MageClass.h */,
-				31FA009E1ACA33500079A4E1 /* MageClass.m */,
-				31FA00A01ACA340A0079A4E1 /* AssassinClass.h */,
-				31FA00A11ACA340A0079A4E1 /* AssassinClass.m */,
-				31FA00A31ACA34220079A4E1 /* WarriorClass.h */,
-				31FA00A41ACA34220079A4E1 /* WarriorClass.m */,
-				31FA00A61ACA342F0079A4E1 /* TemplarClass.h */,
-				31FA00A71ACA342F0079A4E1 /* TemplarClass.m */,
+				31EE9D6B1AD06813004735E2 /* Classes */,
 			);
 			name = Knight;
 			sourceTree = "<group>";

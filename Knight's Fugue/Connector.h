@@ -8,9 +8,17 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "SavedGameData.h"
+#import "Knight.h"
+#import "BerserkerClass.h"
+#import "RogueClass.h"
+#import "MageClass.h"
+#import "AssassinClass.h"
+#import "WarriorClass.h"
+#import "TemplarClass.h"
 
 @interface Connector : NSObject
 
 + (void)customizeBarButton:(UIBarButtonItem*)bbt;
-
++ (void)createAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message;
 @end

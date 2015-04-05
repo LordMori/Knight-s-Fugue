@@ -11,8 +11,8 @@
 
 @interface SavedGameData : NSObject
 
-@property NSDate* saveDate;
-@property (retain) NSDictionary* knight;
+@property NSString* saveDate;
+@property NSDictionary* knight;
 
 - (id)initWithDictionary:(NSDictionary *)sgdDict;
 - (NSDictionary *)toDictionary;

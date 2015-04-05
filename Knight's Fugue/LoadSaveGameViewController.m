@@ -13,9 +13,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [Connector customizeBarButton:_cancelUI_B];
-    [Connector customizeBarButton:_loadUI_B];
-    
+    [self.navigationController setNavigationBarHidden:NO];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self.navigationController action:@selector(popToRootViewControllerAnimated:)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Load" style:UIBarButtonItemStylePlain target:self action:@selector(loadSavedGame)];
+    [Connector customizeBarButton:self.navigationItem.leftBarButtonItem];
+    [Connector customizeBarButton:self.navigationItem.rightBarButtonItem];
     
 }
 
@@ -24,17 +26,8 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
-- (IBAction)loadUI_A:(id)sender {
-
-}
-
-- (IBAction)cancelUI_A:(id)sender {
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+- (void)loadSavedGame {
+    NSLog(@"Load Saved Game");
 }
 
 @end

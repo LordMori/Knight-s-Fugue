@@ -14,15 +14,20 @@
 
 @implementation CharacterCreationOverviewViewController
 
+SavedGameData *sgd;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [Connector customizeBarButton:_cancelUI_B];
-    [Connector customizeBarButton:_createUI_B];
     
+    self.tabBarController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(popToRootView)];
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create" style:UIBarButtonItemStylePlain target:self action:@selector(createNewGame)];
+    [Connector customizeBarButton:self.tabBarController.navigationItem.leftBarButtonItem];
+    [Connector customizeBarButton:self.tabBarController.navigationItem.rightBarButtonItem];
+        
     [self hideDescriptionLabel];
     
-    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
-    SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
+    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedSGD"];
+    sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
     Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
     //NSLog(@"Class: %@\nMorality: %@\nIntelligence: %@", knight.class, knight.morality, knight.intelligenceLvl);
     
@@ -70,6 +75,7 @@
 }
 
 - (void)presentDetailLabel:(NSString*)message{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideDescriptionLabel) object:nil];
     _descriptionLabel.hidden = false;
     _descriptionLabel.enabled = true;
     
@@ -82,17 +88,15 @@
     _descriptionLabel.enabled = false;
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    return UIStatusBarStyleLightContent;
+- (void)createNewGame {
+    [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"gameSaved"];
+    [[NSUserDefaults standardUserDefaults] setObject:[sgd toDictionary] forKey:@"savedGame"];
+
+    NSLog(@"Create New Game");
 }
 
-- (IBAction)createUI_A:(id)sender {
+- (void)popToRootView{
+    [Connector createAlertController:self title:@"Cancel Character Creation?" message:@"All data will be lost if cancelled"];
 }
-
-- (IBAction)cancelUI_A:(id)sender {
-    [[NSUserDefaults standardUserDefaults] setBool:true forKey:@"cancelPressed"];
-    [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
-}
-
 
 @end

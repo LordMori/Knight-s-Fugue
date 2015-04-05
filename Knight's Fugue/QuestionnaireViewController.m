@@ -41,11 +41,14 @@ int numberOfMoralityQs;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
+    [self.navigationController setNavigationBarHidden:NO];
+    self.navigationController.navigationBar.backgroundColor = [[self view] tintColor];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(popToRootView)];
+    [Connector customizeBarButton:self.navigationItem.leftBarButtonItem];
     
     [self createQuestionAndAnswerDicts];
-    
-    [Connector customizeBarButton:_cancelUI_B];
-    
+        
     [self chooseCreationMode];
     
     classQuestionKeys = [[classQuestions allKeys] mutableCopy];
@@ -62,17 +65,6 @@ int numberOfMoralityQs;
     numberOfMoralityQs = 0;
     
     //[self createQuestionAndAnswers];
-}
-
-- (UIStatusBarStyle)preferredStatusBarStyle
-{
-    return UIStatusBarStyleLightContent;
-}
-
-- (void)viewWillAppear:(BOOL)animated{
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"cancelPressed"]){
-        [[self presentingViewController] dismissViewControllerAnimated:NO completion:nil];
-    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -108,6 +100,10 @@ int numberOfMoralityQs;
 
 - (void)createQuestionAndAnswers{
     NSLog(@"%@",[NSString stringWithFormat:@"rogue: %d\nmage: %d\nberserker: %d\ngood: %d\nneutral: %d\nevil: %d",chosenRogueAnswers,chosenMageAnswers,chosenBerserkerAnswers,chosenGoodAnswers,chosenNeutralAnswers,chosenEvilAnswers]);
+    
+    _answer1UI_B.hidden = true;
+    _answer2UI_B.hidden = true;
+    _answer3UI_B.hidden = true;
     
     int qSelection = arc4random_uniform(100);
     
@@ -190,6 +186,12 @@ int numberOfMoralityQs;
     }else if((numberOfClassQs > 10 && numberOfMoralityQs >= 5) || (numberOfClassQs >= 10 && numberOfMoralityQs > 5)){
         [self performSegueWithIdentifier:@"showCharacterCreation" sender:self];
     }
+    
+    [NSThread sleepForTimeInterval:0.15f];
+    _answer1UI_B.hidden = false;
+    _answer2UI_B.hidden = false;
+    _answer3UI_B.hidden = false;
+    _answer3UI_B.enabled = true;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -279,8 +281,6 @@ int numberOfMoralityQs;
         NSLog(@"Manual Segue");
     }else if([button.titleLabel.text isEqualToString:@"Questionnaire"]){
         [self createQuestionAndAnswers];
-        _answer3UI_B.hidden = false;
-        _answer3UI_B.enabled = true;
     }
     
     if([button.titleLabel.text isEqualToString:[rogueAnswers objectForKey:currentQuestion]]){
@@ -305,6 +305,7 @@ int numberOfMoralityQs;
     
     if(incremented == true){
         [self createQuestionAndAnswers];
+        [NSThread sleepForTimeInterval:0.15f];
     }
 
 }
@@ -329,13 +330,17 @@ int numberOfMoralityQs;
     knight.morality = morality;
     
     sgd.knight = [knight toDictionary];
-    sgd.saveDate = [NSDate date];
-        
-    [[NSUserDefaults standardUserDefaults] setObject:[sgd toDictionary] forKey:@"savedGame"];
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"dd/MM/yyyy HH:mm"];
+    
+    sgd.saveDate = [formatter stringFromDate:[NSDate date]];
+            
+    [[NSUserDefaults standardUserDefaults] setObject:[sgd toDictionary] forKey:@"savedSGD"];
 }
 
-- (IBAction)cancelUI_A:(id)sender {
-    [[self presentingViewController] dismissViewControllerAnimated:YES completion:nil];
+- (void)popToRootView{
+    [Connector createAlertController:self title:@"Cancel Character Creation?" message:@"All data will be lost if cancelled"];
 }
 
 @end

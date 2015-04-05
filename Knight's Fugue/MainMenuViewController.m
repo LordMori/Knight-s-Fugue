@@ -17,13 +17,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
-    SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
-    Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
+    [self.navigationController setNavigationBarHidden:YES];
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    self.navigationController.navigationBar.translucent = FALSE;
     
-    if(sgd != nil && knight != nil){
-        _savedGameLabel.text = [NSString stringWithFormat:@"Class: %@  Save Time: %@",[knight.class capitalizedString], sgd.saveDate];
-    }
+//    NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
+//    SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
+//    Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
+//    
+//    if(sgdDict != nil && sgd != nil && knight != nil){
+//        _savedGameLabel.text = [NSString stringWithFormat:@"Name: %@ Class: %@  Save Time: %@",[knight.class capitalizedString], sgd.saveDate];
+//    }
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle
@@ -32,16 +36,14 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    if([[NSUserDefaults standardUserDefaults] boolForKey:@"cancelPressed"]){
-        [[NSUserDefaults standardUserDefaults] setBool:false forKey:@"cancelPressed"];
-    }
+    [self.navigationController setNavigationBarHidden:YES];
     
     NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedGame"];
     SavedGameData *sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
     Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
     
-    if(sgd != nil && knight != nil){
-        _savedGameLabel.text = [NSString stringWithFormat:@"Class: %@  Save Time: %@",[knight.class capitalizedString], sgd.saveDate];
+    if(sgdDict != nil && sgd != nil && knight != nil){
+        _savedGameLabel.text = [NSString stringWithFormat:@"Name: %@  Class: %@  Saved: %@",knight.name,[knight.class capitalizedString], sgd.saveDate];
     }
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C1514" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="w3Q-sG-9h0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
@@ -140,17 +140,17 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="pPT-CT-98C" secondAttribute="centerX" id="1nm-QP-ZtA"/>
                             <constraint firstItem="J6R-LI-pMZ" firstAttribute="top" secondItem="td0-WX-EnP" secondAttribute="bottom" constant="211" id="5hn-Kg-ETp">
-                                <variation key="heightClass=regular-widthClass=compact" constant="73"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="63"/>
                             </constraint>
                             <constraint firstItem="J6R-LI-pMZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="Asu-1q-Pkv"/>
                             <constraint firstItem="td0-WX-EnP" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="FwW-9Z-oBS"/>
                             <constraint firstAttribute="centerX" secondItem="mtA-bZ-cyW" secondAttribute="centerX" id="Ozj-lF-DJf"/>
                             <constraint firstItem="td0-WX-EnP" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="P5P-DO-dvP">
-                                <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="65"/>
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="J6R-LI-pMZ" secondAttribute="centerX" id="QAn-lc-k1M"/>
                             <constraint firstItem="mtA-bZ-cyW" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="UDd-1Y-4AK"/>
@@ -231,7 +231,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="238.5" y="336.75"/>
+            <point key="canvasLocation" x="1156.5" y="336.75"/>
         </scene>
         <!--Load Save Game View Controller-->
         <scene sceneID="dG7-VP-0jx">
@@ -244,65 +244,13 @@
                     <view key="view" contentMode="scaleToFill" id="bFJ-Bx-kga">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="center" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKh-yp-oez">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="backgroundColor" red="0.1137254902" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.1137254902" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem id="M9p-7k-yaz">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="GQq-wy-ign">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="cancelUI_A:" destination="W1A-Xf-x1t" id="QS5-MP-mIl"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Load" style="plain" id="zOV-qD-zfQ">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="loadUI_A:" destination="W1A-Xf-x1t" id="OfO-tm-nju"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1137254902" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="tintColor" red="0.1137254902" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="gKh-yp-oez" firstAttribute="top" secondItem="t4G-7e-IKH" secondAttribute="bottom" id="6yM-3A-SoX"/>
-                            <constraint firstAttribute="centerX" secondItem="gKh-yp-oez" secondAttribute="centerX" id="As8-Oh-OdQ"/>
-                            <constraint firstItem="gKh-yp-oez" firstAttribute="leading" secondItem="bFJ-Bx-kga" secondAttribute="leadingMargin" constant="-16" id="J0r-q0-56h"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="gKh-yp-oez"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="6yM-3A-SoX"/>
-                                <exclude reference="As8-Oh-OdQ"/>
-                                <exclude reference="J0r-q0-56h"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="gKh-yp-oez"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="6yM-3A-SoX"/>
-                                <include reference="As8-Oh-OdQ"/>
-                                <include reference="J0r-q0-56h"/>
-                            </mask>
-                        </variation>
                     </view>
-                    <connections>
-                        <outlet property="cancelUI_B" destination="GQq-wy-ign" id="qps-Z4-Mxd"/>
-                        <outlet property="loadUI_B" destination="zOV-qD-zfQ" id="hUP-uy-2Id"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QsK-He-kHy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="1044.75"/>
+            <point key="canvasLocation" x="1992" y="1047.75"/>
         </scene>
         <!--Questionnaire View Controller-->
         <scene sceneID="xZI-DH-9vu">
@@ -419,43 +367,12 @@
                                     <action selector="answer3UI_A:" destination="FCp-ow-sRx" eventType="touchUpInside" id="HLr-fV-u3X"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LBc-TI-Vpf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="400" id="NCq-Oe-m4c"/>
-                                    <constraint firstAttribute="height" constant="44" id="Tvz-Gs-YWp"/>
-                                </constraints>
-                                <color key="barTintColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem id="ezL-70-96B">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="fDl-fh-Zaf">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="cancelUI_A:" destination="FCp-ow-sRx" id="YmE-id-FeR"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="NCq-Oe-m4c"/>
-                                        <exclude reference="Tvz-Gs-YWp"/>
-                                    </mask>
-                                </variation>
-                                <variation key="heightClass=regular-widthClass=compact">
-                                    <mask key="constraints">
-                                        <include reference="NCq-Oe-m4c"/>
-                                        <include reference="Tvz-Gs-YWp"/>
-                                    </mask>
-                                </variation>
-                            </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="LBc-TI-Vpf" firstAttribute="leading" secondItem="tO0-PW-9vS" secondAttribute="leadingMargin" constant="-16" id="2CK-23-Oso"/>
                             <constraint firstItem="BLp-d9-Qoe" firstAttribute="leading" secondItem="tO0-PW-9vS" secondAttribute="leadingMargin" id="7Zd-vS-SrY"/>
                             <constraint firstItem="BLp-d9-Qoe" firstAttribute="top" secondItem="7aO-Fw-6e8" secondAttribute="bottom" id="8vA-7T-eys">
-                                <variation key="heightClass=regular-widthClass=compact" constant="44"/>
+                                <variation key="heightClass=regular-widthClass=compact" constant="64"/>
                             </constraint>
                             <constraint firstItem="Ebv-Sg-9af" firstAttribute="leading" secondItem="tO0-PW-9vS" secondAttribute="leadingMargin" id="MKV-mo-gDc"/>
                             <constraint firstItem="jx1-9d-q32" firstAttribute="top" secondItem="BLp-d9-Qoe" secondAttribute="bottom" constant="48" id="Szr-1R-Nen">
@@ -464,7 +381,6 @@
                             <constraint firstItem="OGO-R1-p1e" firstAttribute="leading" secondItem="tO0-PW-9vS" secondAttribute="leadingMargin" id="XcR-cI-jWu"/>
                             <constraint firstAttribute="centerX" secondItem="BLp-d9-Qoe" secondAttribute="centerX" id="Xj2-Xg-w6l"/>
                             <constraint firstAttribute="centerX" secondItem="OGO-R1-p1e" secondAttribute="centerX" id="aYU-DP-sgC"/>
-                            <constraint firstItem="LBc-TI-Vpf" firstAttribute="top" secondItem="7aO-Fw-6e8" secondAttribute="bottom" id="bze-CH-FYG"/>
                             <constraint firstAttribute="centerX" secondItem="Ebv-Sg-9af" secondAttribute="centerX" id="dQV-gN-J2e"/>
                             <constraint firstItem="jx1-9d-q32" firstAttribute="leading" secondItem="tO0-PW-9vS" secondAttribute="leadingMargin" id="dbo-TQ-4ki"/>
                             <constraint firstItem="OGO-R1-p1e" firstAttribute="top" secondItem="jx1-9d-q32" secondAttribute="bottom" constant="37" id="js2-ud-G5Q">
@@ -481,7 +397,6 @@
                                 <exclude reference="OGO-R1-p1e"/>
                                 <exclude reference="jx1-9d-q32"/>
                                 <exclude reference="Ebv-Sg-9af"/>
-                                <exclude reference="LBc-TI-Vpf"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="7Zd-vS-SrY"/>
@@ -496,8 +411,6 @@
                                 <exclude reference="Szr-1R-Nen"/>
                                 <exclude reference="dbo-TQ-4ki"/>
                                 <exclude reference="qhY-06-h2b"/>
-                                <exclude reference="2CK-23-Oso"/>
-                                <exclude reference="bze-CH-FYG"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -506,7 +419,6 @@
                                 <include reference="OGO-R1-p1e"/>
                                 <include reference="jx1-9d-q32"/>
                                 <include reference="Ebv-Sg-9af"/>
-                                <include reference="LBc-TI-Vpf"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="7Zd-vS-SrY"/>
@@ -521,8 +433,6 @@
                                 <include reference="Szr-1R-Nen"/>
                                 <include reference="dbo-TQ-4ki"/>
                                 <include reference="qhY-06-h2b"/>
-                                <include reference="2CK-23-Oso"/>
-                                <include reference="bze-CH-FYG"/>
                             </mask>
                         </variation>
                     </view>
@@ -530,16 +440,15 @@
                         <outlet property="answer1UI_B" destination="jx1-9d-q32" id="4h7-5U-bA3"/>
                         <outlet property="answer2UI_B" destination="OGO-R1-p1e" id="Qdw-Il-jAt"/>
                         <outlet property="answer3UI_B" destination="Ebv-Sg-9af" id="1h1-Hr-IfB"/>
-                        <outlet property="cancelUI_B" destination="fDl-fh-Zaf" id="1Mg-pj-whd"/>
                         <outlet property="questionLabel" destination="BLp-d9-Qoe" id="MFR-ep-Ua4"/>
                         <segue destination="Qjx-Fv-XAO" kind="show" identifier="showCharacterCreation" id="Z6h-zQ-fRD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMC-g1-gMV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1074" y="336.75"/>
+            <point key="canvasLocation" x="1992" y="336.75"/>
         </scene>
-        <!--Screen 1-->
+        <!--Overview-->
         <scene sceneID="A68-eK-Cia">
             <objects>
                 <viewController id="sVR-gN-0eU" customClass="CharacterCreationOverviewViewController" sceneMemberID="viewController">
@@ -551,26 +460,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DbW-LE-o0w">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="barTintColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem id="XmB-ru-MzU">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="8up-U6-FN8">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="cancelUI_A:" destination="sVR-gN-0eU" id="ori-kK-hrI"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Create" style="plain" id="yaQ-nd-szZ">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="createUI_A:" destination="sVR-gN-0eU" id="vRj-bJ-S6k"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8VK-Hn-h8J">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -737,11 +626,10 @@
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1I3-bO-J4O" firstAttribute="top" secondItem="qB5-Gr-X3C" secondAttribute="bottom" constant="8" id="3Sq-Yj-nMs"/>
                             <constraint firstAttribute="centerX" secondItem="1I3-bO-J4O" secondAttribute="centerX" id="4ej-R7-UTE"/>
-                            <constraint firstAttribute="centerX" secondItem="DbW-LE-o0w" secondAttribute="centerX" id="6sK-Ic-OFi"/>
                             <constraint firstItem="qB5-Gr-X3C" firstAttribute="top" secondItem="uui-qa-D8j" secondAttribute="bottom" constant="49" id="7mn-iz-Q8V"/>
                             <constraint firstItem="1I3-bO-J4O" firstAttribute="leading" secondItem="qB5-Gr-X3C" secondAttribute="trailing" constant="8" id="GA0-TE-Esz"/>
                             <constraint firstItem="qB5-Gr-X3C" firstAttribute="leading" secondItem="Uuf-SH-4Go" secondAttribute="leadingMargin" id="GQW-RE-526"/>
@@ -750,9 +638,6 @@
                             </constraint>
                             <constraint firstAttribute="centerX" secondItem="rD1-Vh-A9I" secondAttribute="centerX" id="OUg-DU-Lof"/>
                             <constraint firstItem="1I3-bO-J4O" firstAttribute="leading" secondItem="Uuf-SH-4Go" secondAttribute="leadingMargin" id="aJ7-ZR-zlL"/>
-                            <constraint firstItem="8VK-Hn-h8J" firstAttribute="top" secondItem="DbW-LE-o0w" secondAttribute="bottom" id="aRc-5a-Cil"/>
-                            <constraint firstItem="DbW-LE-o0w" firstAttribute="leading" secondItem="Uuf-SH-4Go" secondAttribute="leadingMargin" constant="-16" id="c7t-XS-aMC"/>
-                            <constraint firstItem="DbW-LE-o0w" firstAttribute="top" secondItem="nbs-YM-zbE" secondAttribute="bottom" id="dBN-GG-4Ea"/>
                             <constraint firstAttribute="centerX" secondItem="HZi-OY-h20" secondAttribute="centerX" id="dvn-iY-5lw"/>
                             <constraint firstItem="HZi-OY-h20" firstAttribute="top" secondItem="rD1-Vh-A9I" secondAttribute="bottom" constant="193" id="e8M-lW-cfa">
                                 <variation key="heightClass=regular-widthClass=compact" constant="142"/>
@@ -767,12 +652,12 @@
                             <constraint firstItem="1I3-bO-J4O" firstAttribute="top" secondItem="uui-qa-D8j" secondAttribute="bottom" constant="49" id="req-SE-Z1g"/>
                             <constraint firstItem="1w4-N4-mgV" firstAttribute="top" secondItem="uui-qa-D8j" secondAttribute="bottom" constant="1" id="s8r-K4-kE5"/>
                             <constraint firstItem="qB5-Gr-X3C" firstAttribute="leading" secondItem="Uuf-SH-4Go" secondAttribute="leadingMargin" id="tFM-aI-k7d"/>
+                            <constraint firstItem="8VK-Hn-h8J" firstAttribute="top" secondItem="nbs-YM-zbE" secondAttribute="bottom" constant="64" id="tSz-J4-Xih"/>
                             <constraint firstAttribute="centerX" secondItem="8VK-Hn-h8J" secondAttribute="centerX" id="x4a-xv-KA5"/>
                             <constraint firstItem="rD1-Vh-A9I" firstAttribute="top" secondItem="1I3-bO-J4O" secondAttribute="bottom" constant="8" id="yjZ-25-gsY"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="DbW-LE-o0w"/>
                                 <exclude reference="8VK-Hn-h8J"/>
                                 <exclude reference="uui-qa-D8j"/>
                                 <exclude reference="qB5-Gr-X3C"/>
@@ -782,11 +667,8 @@
                                 <exclude reference="1w4-N4-mgV"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="6sK-Ic-OFi"/>
-                                <exclude reference="c7t-XS-aMC"/>
-                                <exclude reference="dBN-GG-4Ea"/>
-                                <exclude reference="aRc-5a-Cil"/>
                                 <exclude reference="nB9-4E-R5O"/>
+                                <exclude reference="tSz-J4-Xih"/>
                                 <exclude reference="x4a-xv-KA5"/>
                                 <exclude reference="j8G-Y9-hfM"/>
                                 <exclude reference="jDZ-Re-cgb"/>
@@ -812,7 +694,6 @@
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
-                                <include reference="DbW-LE-o0w"/>
                                 <include reference="8VK-Hn-h8J"/>
                                 <include reference="uui-qa-D8j"/>
                                 <include reference="qB5-Gr-X3C"/>
@@ -822,11 +703,8 @@
                                 <include reference="1w4-N4-mgV"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="6sK-Ic-OFi"/>
-                                <include reference="c7t-XS-aMC"/>
-                                <include reference="dBN-GG-4Ea"/>
-                                <include reference="aRc-5a-Cil"/>
                                 <include reference="nB9-4E-R5O"/>
+                                <include reference="tSz-J4-Xih"/>
                                 <include reference="x4a-xv-KA5"/>
                                 <include reference="j8G-Y9-hfM"/>
                                 <include reference="jDZ-Re-cgb"/>
@@ -851,11 +729,9 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Screen 1" id="nCz-ge-owM"/>
+                    <tabBarItem key="tabBarItem" title="Overview" id="nCz-ge-owM"/>
                     <connections>
-                        <outlet property="cancelUI_B" destination="8up-U6-FN8" id="D03-0E-CFz"/>
                         <outlet property="classLabel" destination="uui-qa-D8j" id="4Of-QF-vS9"/>
-                        <outlet property="createUI_B" destination="yaQ-nd-szZ" id="0a1-Se-iGS"/>
                         <outlet property="descriptionLabel" destination="HZi-OY-h20" id="nnj-IZ-6Eb"/>
                         <outlet property="dexterityLabel" destination="rD1-Vh-A9I" id="bEm-4B-oUE"/>
                         <outlet property="intelligenceLabel" destination="1I3-bO-J4O" id="kSW-VP-Ji6"/>
@@ -866,9 +742,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EJY-Mz-xX6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716.5" y="35.25"/>
+            <point key="canvasLocation" x="3634.5" y="35.25"/>
         </scene>
-        <!--Screen 2-->
+        <!--Stats-->
         <scene sceneID="ZWi-as-eVg">
             <objects>
                 <viewController id="tgM-05-2zb" customClass="CharacterCreationStatsViewController" sceneMemberID="viewController">
@@ -879,64 +755,13 @@
                     <view key="view" contentMode="scaleToFill" id="Weo-0l-V4e">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="551"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fu-C7-egD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <color key="barTintColor" red="0.1137254902" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <items>
-                                    <navigationItem id="g4b-Za-BRJ">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="pqo-NO-oLx">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="cancelUI_A:" destination="tgM-05-2zb" id="jtK-M9-dVx"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Create" style="plain" id="qoR-Se-uPR">
-                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <action selector="createUI_A:" destination="tgM-05-2zb" id="rDH-l8-h1d"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1137254902" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="0Fu-C7-egD" firstAttribute="top" secondItem="mAA-qC-jTT" secondAttribute="bottom" id="9lS-GZ-CI4"/>
-                            <constraint firstItem="0Fu-C7-egD" firstAttribute="leading" secondItem="Weo-0l-V4e" secondAttribute="leadingMargin" constant="-16" id="boH-hV-Aie"/>
-                            <constraint firstAttribute="centerX" secondItem="0Fu-C7-egD" secondAttribute="centerX" id="xNU-xI-NMl"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="0Fu-C7-egD"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="9lS-GZ-CI4"/>
-                                <exclude reference="boH-hV-Aie"/>
-                                <exclude reference="xNU-xI-NMl"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="0Fu-C7-egD"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="9lS-GZ-CI4"/>
-                                <include reference="boH-hV-Aie"/>
-                                <include reference="xNU-xI-NMl"/>
-                            </mask>
-                        </variation>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Screen 2" id="q06-Zt-WZO"/>
-                    <connections>
-                        <outlet property="cancelUI_B" destination="pqo-NO-oLx" id="61K-Ql-NVr"/>
-                        <outlet property="createUI_B" destination="qoR-Se-uPR" id="Le1-gp-HsG"/>
-                    </connections>
+                    <tabBarItem key="tabBarItem" title="Stats" id="q06-Zt-WZO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t34-Wu-lgJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716.5" y="668.25"/>
+            <point key="canvasLocation" x="3634.5" y="668.25"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hM6-fg-hGw">
@@ -947,7 +772,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="InK-vJ-Qe3">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="barTintColor" red="0.1137254902" green="0.039215686270000001" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="sVR-gN-0eU" kind="relationship" relationship="viewControllers" id="9Ex-mf-nd4"/>
@@ -956,8 +781,28 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fdx-uT-ZSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1852.5" y="336.75"/>
+            <point key="canvasLocation" x="2770.5" y="336.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="39m-A2-UhY">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="w3Q-sG-9h0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="tLE-SM-fjr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.066666666669999999" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qjk-MQ-PLd"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M0H-Eg-wve" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="238.5" y="336.75"/>
         </scene>
     </scenes>
-    <color key="tintColor" red="0.066666666666666666" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+    <color key="tintColor" red="0.11372549019607843" green="0.039215686274509803" blue="0.12156862745098039" alpha="1" colorSpace="calibratedRGB"/>
 </document>

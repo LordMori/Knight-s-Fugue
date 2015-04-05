@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "Connector.h"
-#import "SavedGameData.h"
-#import "Knight.h"
 
 @interface MainMenuViewController : UIViewController
 
