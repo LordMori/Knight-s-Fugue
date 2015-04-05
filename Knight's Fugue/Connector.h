@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "UILabel+ActionSheet.h"
 #import "SavedGameData.h"
 #import "Knight.h"
 #import "BerserkerClass.h"

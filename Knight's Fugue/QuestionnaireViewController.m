@@ -99,7 +99,7 @@ int numberOfMoralityQs;
 }
 
 - (void)createQuestionAndAnswers{
-    NSLog(@"%@",[NSString stringWithFormat:@"rogue: %d\nmage: %d\nberserker: %d\ngood: %d\nneutral: %d\nevil: %d",chosenRogueAnswers,chosenMageAnswers,chosenBerserkerAnswers,chosenGoodAnswers,chosenNeutralAnswers,chosenEvilAnswers]);
+    NSLog(@"rogue: %d\nmage: %d\nberserker: %d\ngood: %d\nneutral: %d\nevil: %d",chosenRogueAnswers,chosenMageAnswers,chosenBerserkerAnswers,chosenGoodAnswers,chosenNeutralAnswers,chosenEvilAnswers);
     
     _answer1UI_B.hidden = true;
     _answer2UI_B.hidden = true;
@@ -230,15 +230,21 @@ int numberOfMoralityQs;
                     classString = @"templar";
                 }
             }
-        }else if(roguePercentage >= 66.0){
+        }else if(roguePercentage >= 70.0){
             classString = @"rogue";
-        }else if(magePercentage >= 66.0){
+        }else if(magePercentage >= 70.0){
             classString = @"mage";
-        }else if(berserkerPercentage >= 66.0){
+        }else if(berserkerPercentage >= 70.0){
             classString = @"berserker";
-        }else if((roguePercentage >= 33.0 && magePercentage >= 30.0) || (roguePercentage >= 30.0 && magePercentage >= 33.0)){
+        }else if(roguePercentage == 60.0 && magePercentage == 20 && berserkerPercentage == 20){
+            classString = @"rogue";
+        }else if(magePercentage == 60.0 && roguePercentage == 20 && berserkerPercentage == 20){
+            classString = @"mage";
+        }else if(berserkerPercentage >= 60.0 && magePercentage == 20 && roguePercentage == 20){
+            classString = @"berserker";
+        }else if((roguePercentage >= 40.0 && magePercentage >= 30.0) || (roguePercentage >= 30.0 && magePercentage >= 40.0)){
             classString = @"assassin";
-        }else if((roguePercentage >= 33.0 && berserkerPercentage >= 30.0) || (roguePercentage >= 30.0 && berserkerPercentage >= 33.0)){
+        }else if((roguePercentage >= 40.0 && berserkerPercentage >= 30.0) || (roguePercentage >= 30.0 && berserkerPercentage >= 40.0)){
             classString = @"warrior";
         }else{
             classString = @"templar";

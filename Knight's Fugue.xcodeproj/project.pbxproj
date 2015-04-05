@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B41AC4F385007B58E1 /* SavedGameData.m */; };
 		313FC4B81AC4FA80007B58E1 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B71AC4FA80007B58E1 /* Knight.m */; };
-		3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */; };
 		3166DB001AC65A3D000E48D6 /* Connector.m in Sources */ = {isa = PBXBuildFile; fileRef = 3166DAFF1AC65A3D000E48D6 /* Connector.m */; };
 		31858D9F1AC0C46000426C57 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858D9E1AC0C46000426C57 /* main.m */; };
 		31858DA21AC0C46000426C57 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DA11AC0C46000426C57 /* AppDelegate.m */; };
@@ -21,6 +20,8 @@
 		31B873E01AD0D9CF001A9B13 /* RogueClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B873DF1AD0D9CF001A9B13 /* RogueClass.m */; };
 		31B873E31AD0D9E2001A9B13 /* Modern Serif Eroded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31B873E11AD0D9E2001A9B13 /* Modern Serif Eroded.ttf */; };
 		31B873E41AD0D9E2001A9B13 /* Planewalker.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31B873E21AD0D9E2001A9B13 /* Planewalker.otf */; };
+		31B873E61AD0EC7D001A9B13 /* alagard_by_pix3m.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31B873E51AD0EC7D001A9B13 /* alagard_by_pix3m.ttf */; };
+		31ED558C1AD0F5A10081157E /* UILabel+ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ED558B1AD0F5A10081157E /* UILabel+ActionSheet.m */; };
 		31FA00911AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00901AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m */; };
 		31FA00951AC9FE9D0079A4E1 /* LoadSaveGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00941AC9FE9D0079A4E1 /* LoadSaveGameViewController.m */; };
 		31FA009C1ACA2A590079A4E1 /* BerserkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA009B1ACA2A590079A4E1 /* BerserkerClass.m */; };
@@ -35,7 +36,6 @@
 		313FC4B41AC4F385007B58E1 /* SavedGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGameData.m; sourceTree = "<group>"; };
 		313FC4B61AC4FA80007B58E1 /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
 		313FC4B71AC4FA80007B58E1 /* Knight.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Knight.m; sourceTree = "<group>"; };
-		3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Knights Quest.ttf"; sourceTree = "<group>"; };
 		3166DAFE1AC65A3D000E48D6 /* Connector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Connector.h; sourceTree = "<group>"; };
 		3166DAFF1AC65A3D000E48D6 /* Connector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Connector.m; sourceTree = "<group>"; };
 		31858D991AC0C46000426C57 /* Knight's Fugue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Knight's Fugue.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +55,9 @@
 		31B873DF1AD0D9CF001A9B13 /* RogueClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RogueClass.m; sourceTree = "<group>"; };
 		31B873E11AD0D9E2001A9B13 /* Modern Serif Eroded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Modern Serif Eroded.ttf"; sourceTree = "<group>"; };
 		31B873E21AD0D9E2001A9B13 /* Planewalker.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Planewalker.otf; sourceTree = "<group>"; };
+		31B873E51AD0EC7D001A9B13 /* alagard_by_pix3m.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alagard_by_pix3m.ttf; sourceTree = "<group>"; };
+		31ED558A1AD0F5A10081157E /* UILabel+ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ActionSheet.h"; sourceTree = "<group>"; };
+		31ED558B1AD0F5A10081157E /* UILabel+ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ActionSheet.m"; sourceTree = "<group>"; };
 		31FA008F1AC9F7A20079A4E1 /* CharacterCreationStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationStatsViewController.h; sourceTree = "<group>"; };
 		31FA00901AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationStatsViewController.m; sourceTree = "<group>"; };
 		31FA00931AC9FE9D0079A4E1 /* LoadSaveGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadSaveGameViewController.h; sourceTree = "<group>"; };
@@ -99,6 +102,8 @@
 		3166DB011AC65A44000E48D6 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				31ED558A1AD0F5A10081157E /* UILabel+ActionSheet.h */,
+				31ED558B1AD0F5A10081157E /* UILabel+ActionSheet.m */,
 				3166DAFE1AC65A3D000E48D6 /* Connector.h */,
 				3166DAFF1AC65A3D000E48D6 /* Connector.m */,
 			);
@@ -141,9 +146,9 @@
 		31858D9C1AC0C46000426C57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				31B873E51AD0EC7D001A9B13 /* alagard_by_pix3m.ttf */,
 				31B873E11AD0D9E2001A9B13 /* Modern Serif Eroded.ttf */,
 				31B873E21AD0D9E2001A9B13 /* Planewalker.otf */,
-				3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */,
 				31858D9D1AC0C46000426C57 /* Info.plist */,
 				31858D9E1AC0C46000426C57 /* main.m */,
 			);
@@ -249,8 +254,8 @@
 			files = (
 				31B873E31AD0D9E2001A9B13 /* Modern Serif Eroded.ttf in Resources */,
 				31858DA81AC0C46000426C57 /* Main.storyboard in Resources */,
-				3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */,
 				31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */,
+				31B873E61AD0EC7D001A9B13 /* alagard_by_pix3m.ttf in Resources */,
 				31B873E41AD0D9E2001A9B13 /* Planewalker.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +277,7 @@
 				31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */,
 				31FA00911AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m in Sources */,
 				313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */,
+				31ED558C1AD0F5A10081157E /* UILabel+ActionSheet.m in Sources */,
 				31858D9F1AC0C46000426C57 /* main.m in Sources */,
 				31FA009C1ACA2A590079A4E1 /* BerserkerClass.m in Sources */,
 				31B873E01AD0D9CF001A9B13 /* RogueClass.m in Sources */,
