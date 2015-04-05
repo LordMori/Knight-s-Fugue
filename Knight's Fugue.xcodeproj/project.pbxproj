@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3122159E1AC91AAE0095086A /* Modern Serif Eroded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3122159D1AC91AAE0095086A /* Modern Serif Eroded.ttf */; };
+		312215A01AC91BD20095086A /* Planewalker.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3122159F1AC91BD20095086A /* Planewalker.otf */; };
 		313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B41AC4F385007B58E1 /* SavedGameData.m */; };
 		313FC4B81AC4FA80007B58E1 /* Knight.m in Sources */ = {isa = PBXBuildFile; fileRef = 313FC4B71AC4FA80007B58E1 /* Knight.m */; };
 		3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */; };
@@ -18,11 +20,9 @@
 		31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31858DA91AC0C46000426C57 /* Images.xcassets */; };
 		31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DC31AC0C90200426C57 /* QuestionnaireViewController.m */; };
 		31858DC71AC0D71000426C57 /* CharacterCreationOverviewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31858DC61AC0D71000426C57 /* CharacterCreationOverviewViewController.m */; };
-		31B873D21AD0D4B9001A9B13 /* RogueClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31B873D11AD0D4B9001A9B13 /* RogueClass.m */; };
-		31B873D51AD0D4DB001A9B13 /* Modern Serif Eroded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31B873D31AD0D4DB001A9B13 /* Modern Serif Eroded.ttf */; };
-		31B873D61AD0D4DB001A9B13 /* Planewalker.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31B873D41AD0D4DB001A9B13 /* Planewalker.otf */; };
 		31FA00911AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00901AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m */; };
 		31FA00951AC9FE9D0079A4E1 /* LoadSaveGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00941AC9FE9D0079A4E1 /* LoadSaveGameViewController.m */; };
+		31FA00981ACA27100079A4E1 /* RogueClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00971ACA27100079A4E1 /* RogueClass.m */; };
 		31FA009C1ACA2A590079A4E1 /* BerserkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA009B1ACA2A590079A4E1 /* BerserkerClass.m */; };
 		31FA009F1ACA33500079A4E1 /* MageClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA009E1ACA33500079A4E1 /* MageClass.m */; };
 		31FA00A21ACA340A0079A4E1 /* AssassinClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00A11ACA340A0079A4E1 /* AssassinClass.m */; };
@@ -31,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3122159D1AC91AAE0095086A /* Modern Serif Eroded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Modern Serif Eroded.ttf"; path = "../Modern Serif Eroded.ttf"; sourceTree = "<group>"; };
+		3122159F1AC91BD20095086A /* Planewalker.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Planewalker.otf; path = ../Planewalker.otf; sourceTree = "<group>"; };
 		313FC4B31AC4F385007B58E1 /* SavedGameData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SavedGameData.h; sourceTree = "<group>"; };
 		313FC4B41AC4F385007B58E1 /* SavedGameData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SavedGameData.m; sourceTree = "<group>"; };
 		313FC4B61AC4FA80007B58E1 /* Knight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Knight.h; sourceTree = "<group>"; };
@@ -51,14 +53,12 @@
 		31858DC31AC0C90200426C57 /* QuestionnaireViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionnaireViewController.m; sourceTree = "<group>"; };
 		31858DC51AC0D71000426C57 /* CharacterCreationOverviewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationOverviewViewController.h; sourceTree = "<group>"; };
 		31858DC61AC0D71000426C57 /* CharacterCreationOverviewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationOverviewViewController.m; sourceTree = "<group>"; };
-		31B873D01AD0D4B9001A9B13 /* RogueClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RogueClass.h; sourceTree = "<group>"; };
-		31B873D11AD0D4B9001A9B13 /* RogueClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RogueClass.m; sourceTree = "<group>"; };
-		31B873D31AD0D4DB001A9B13 /* Modern Serif Eroded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Modern Serif Eroded.ttf"; sourceTree = "<group>"; };
-		31B873D41AD0D4DB001A9B13 /* Planewalker.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Planewalker.otf; sourceTree = "<group>"; };
 		31FA008F1AC9F7A20079A4E1 /* CharacterCreationStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationStatsViewController.h; sourceTree = "<group>"; };
 		31FA00901AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationStatsViewController.m; sourceTree = "<group>"; };
 		31FA00931AC9FE9D0079A4E1 /* LoadSaveGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadSaveGameViewController.h; sourceTree = "<group>"; };
 		31FA00941AC9FE9D0079A4E1 /* LoadSaveGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadSaveGameViewController.m; sourceTree = "<group>"; };
+		31FA00961ACA27100079A4E1 /* RogueClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RogueClass.h; path = ../RogueClass.h; sourceTree = "<group>"; };
+		31FA00971ACA27100079A4E1 /* RogueClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RogueClass.m; path = ../RogueClass.m; sourceTree = "<group>"; };
 		31FA009A1ACA2A590079A4E1 /* BerserkerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BerserkerClass.h; sourceTree = "<group>"; };
 		31FA009B1ACA2A590079A4E1 /* BerserkerClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BerserkerClass.m; sourceTree = "<group>"; };
 		31FA009D1ACA33500079A4E1 /* MageClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MageClass.h; sourceTree = "<group>"; };
@@ -141,8 +141,8 @@
 		31858D9C1AC0C46000426C57 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				31B873D31AD0D4DB001A9B13 /* Modern Serif Eroded.ttf */,
-				31B873D41AD0D4DB001A9B13 /* Planewalker.otf */,
+				3122159F1AC91BD20095086A /* Planewalker.otf */,
+				3122159D1AC91AAE0095086A /* Modern Serif Eroded.ttf */,
 				3166DAFC1AC6594C000E48D6 /* Knights Quest.ttf */,
 				31858D9D1AC0C46000426C57 /* Info.plist */,
 				31858D9E1AC0C46000426C57 /* main.m */,
@@ -153,8 +153,8 @@
 		31EE9D6B1AD06813004735E2 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				31B873D01AD0D4B9001A9B13 /* RogueClass.h */,
-				31B873D11AD0D4B9001A9B13 /* RogueClass.m */,
+				31FA00961ACA27100079A4E1 /* RogueClass.h */,
+				31FA00971ACA27100079A4E1 /* RogueClass.m */,
 				31FA009A1ACA2A590079A4E1 /* BerserkerClass.h */,
 				31FA009B1ACA2A590079A4E1 /* BerserkerClass.m */,
 				31FA009D1ACA33500079A4E1 /* MageClass.h */,
@@ -247,8 +247,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31B873D51AD0D4DB001A9B13 /* Modern Serif Eroded.ttf in Resources */,
-				31B873D61AD0D4DB001A9B13 /* Planewalker.otf in Resources */,
+				3122159E1AC91AAE0095086A /* Modern Serif Eroded.ttf in Resources */,
+				312215A01AC91BD20095086A /* Planewalker.otf in Resources */,
 				31858DA81AC0C46000426C57 /* Main.storyboard in Resources */,
 				3166DAFD1AC6594C000E48D6 /* Knights Quest.ttf in Resources */,
 				31858DAA1AC0C46000426C57 /* Images.xcassets in Resources */,
@@ -271,10 +271,10 @@
 				31FA00951AC9FE9D0079A4E1 /* LoadSaveGameViewController.m in Sources */,
 				31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */,
 				31FA00911AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m in Sources */,
+				31FA00981ACA27100079A4E1 /* RogueClass.m in Sources */,
 				313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */,
 				31858D9F1AC0C46000426C57 /* main.m in Sources */,
 				31FA009C1ACA2A590079A4E1 /* BerserkerClass.m in Sources */,
-				31B873D21AD0D4B9001A9B13 /* RogueClass.m in Sources */,
 				31FA00A51ACA34220079A4E1 /* WarriorClass.m in Sources */,
 				31858DC71AC0D71000426C57 /* CharacterCreationOverviewViewController.m in Sources */,
 				31FA00A21ACA340A0079A4E1 /* AssassinClass.m in Sources */,
