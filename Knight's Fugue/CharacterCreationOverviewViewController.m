@@ -20,12 +20,12 @@ Knight *knight;
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(popToRootView)];
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create" style:UIBarButtonItemStylePlain target:self action:@selector(createNewGame)];
-    [Connector customizeBarButton:self.navigationItem.leftBarButtonItem];
-    [Connector customizeBarButton:self.navigationItem.rightBarButtonItem];
+    self.tabBarController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(popToRootView)];
+    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create" style:UIBarButtonItemStylePlain target:self action:@selector(createNewGame)];
+    [Connector customizeBarButton:self.tabBarController.navigationItem.leftBarButtonItem];
+    [Connector customizeBarButton:self.tabBarController.navigationItem.rightBarButtonItem];
         
-    [self hideDescriptionLabel];
+    [self presentDetailLabel:@"Click on attribute to learn more"];
     
     NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedSGD"];
     sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
@@ -36,9 +36,6 @@ Knight *knight;
     [self createLabelWithTapRecognizer:_classLabel labelText:[NSString stringWithFormat:@"Class: %@",[knight.class capitalizedString]]];
     [self  createLabelWithTapRecognizer:_moralityLabel labelText:[NSString stringWithFormat:@"Morality: %@",[knight.morality capitalizedString]]];
     [self createLabelWithTapRecognizer:_nameLabel labelText:[NSString stringWithFormat:@"Name: %@",knight.name]];
-    [self createLabelWithTapRecognizer:_strengthLabel labelText:[NSString stringWithFormat:@"Strength: %@",knight.strengthLvl]];
-    [self createLabelWithTapRecognizer:_intelligenceLabel labelText:[NSString stringWithFormat:@"Intelligence: %@",knight.intelligenceLvl]];
-    [self createLabelWithTapRecognizer:_dexterityLabel labelText:[NSString stringWithFormat:@"Dexterity: %@",knight.dexterityLvl]];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNameFromCustom:) name:@"customNameEntered" object:nil];
 }
@@ -68,12 +65,6 @@ Knight *knight;
     if([tappedLabel.text isEqualToString:_descriptionLabel.text]){
         [self hideDescriptionLabel];
         [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(hideDescriptionLabel) object:nil];
-    }else if([tappedLabel.text isEqualToString:_strengthLabel.text]){
-        [self presentDetailLabel:@"Strength Skill Details"];
-    }else if([tappedLabel.text isEqualToString:_intelligenceLabel.text]){
-        [self presentDetailLabel:@"Intelligence Skill Details"];
-    }else if([tappedLabel.text isEqualToString:_dexterityLabel.text]){
-        [self presentDetailLabel:@"Dexterity Skill Details"];
     }else if([tappedLabel.text isEqualToString:_classLabel.text]){
         [self presentDetailLabel:@"Class Details"];
     }else if([tappedLabel.text isEqualToString:_moralityLabel.text]){

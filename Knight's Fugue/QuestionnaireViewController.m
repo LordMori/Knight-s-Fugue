@@ -82,21 +82,21 @@ int numberOfMoralityQs;
 }
 
 - (void)createQuestionAndAnswerDicts{
-    classQuestions = @{@"q1" : @"I enjoy the thought of...", @"q2" : @"I prefer working with my...", @"q3" : @"My temperament would best be described as...", @"q4" : @"I feel most at ease...", @"q5" : @"cQuestion 5", @"q6" : @"cQuestion 6", @"q7" : @"cQuestion 7", @"q8" : @"cQuestion 8", @"q9" : @"cQuestion 9", @"q10" : @"cQuestion 10"};
+    classQuestions = @{@"q1" : @"I enjoy the thought of...", @"q2" : @"I prefer working with my...", @"q3" : @"My temperament would best be described as...", @"q4" : @"I feel most at ease...", @"q5" : @"A family member asks you to get food from the market, I...", @"q6" : @"How do you pay for a pint of mead?", @"q7" : @"cQuestion 7", @"q8" : @"cQuestion 8", @"q9" : @"cQuestion 9", @"q10" : @"cQuestion 10"};
     
-    rogueAnswers = @{@"q1" : @"Cunning", @"q2" : @"Tools", @"q3" : @"Relaxed", @"q4" : @"In a crowd", @"q5" : @"rAnswer 5", @"q6" : @"rAnswer 6", @"q7" : @"rAnswer 7", @"q8" : @"rAnswer 8", @"q9" : @"rAnswer 9", @"q10" : @"rAnswer 10"};
+    rogueAnswers = @{@"q1" : @"Cunning", @"q2" : @"Tools", @"q3" : @"Relaxed", @"q4" : @"In a crowd", @"q5" : @"Steal it", @"q6" : @"I don't", @"q7" : @"rAnswer 7", @"q8" : @"rAnswer 8", @"q9" : @"rAnswer 9", @"q10" : @"rAnswer 10"};
     
-    mageAnswers = @{@"q1" : @"Discovery", @"q2" : @"Mind", @"q3" : @"Patient", @"q4" : @"Alone", @"q5" : @"mAnswer 5", @"q6" : @"mAnswer 6", @"q7" : @"mAnswer 7", @"q8" : @"mAnswer 8", @"q9" : @"mAnswer 9", @"q10" : @"mAnswer 10"};
+    mageAnswers = @{@"q1" : @"Discovery", @"q2" : @"Mind", @"q3" : @"Patient", @"q4" : @"Alone", @"q5" : @"Buy it", @"q6" : @"Money", @"q7" : @"mAnswer 7", @"q8" : @"mAnswer 8", @"q9" : @"mAnswer 9", @"q10" : @"mAnswer 10"};
     
-    berserkerAnswers = @{@"q1" : @"War", @"q2" : @"Hands", @"q3" : @"Confident", @"q4" : @"In the open", @"q5" : @"bAnswer 5", @"q6" : @"bAnswer 6", @"q7" : @"bAnswer 7", @"q8" : @"bAnswer 8", @"q9" : @"bAnswer 9", @"q10" : @"bAnswer 10"};
+    berserkerAnswers = @{@"q1" : @"War", @"q2" : @"Hands", @"q3" : @"Confident", @"q4" : @"In the open", @"q5" : @"Take it by force", @"q6" : @"An arm wrestle", @"q7" : @"bAnswer 7", @"q8" : @"bAnswer 8", @"q9" : @"bAnswer 9", @"q10" : @"bAnswer 10"};
     
-    moralityQuestions = @{@"q1" : @"Morality Question 1", @"q2" : @"Morality Question 2", @"q3" : @"Morality Question 3", @"q4" : @"Morality Question 4", @"q5" : @"Morality Question 5"};
+    moralityQuestions = @{@"q1" : @"I'm offered money to kill someone, I...", @"q2" : @"I discover an acquaintance is about to be executed, I...", @"q3" : @"Morality Question 3", @"q4" : @"Morality Question 4", @"q5" : @"Morality Question 5"};
     
-    goodAnswers = @{@"q1" : @"gAnswer 1", @"q2" : @"gAnswer 2", @"q3" : @"gAnswer 3", @"q4" : @"gAnswer 4", @"q5" : @"gAnswer 5"};
+    goodAnswers = @{@"q1" : @"Decline", @"q2" : @"Must save him", @"q3" : @"gAnswer 3", @"q4" : @"gAnswer 4", @"q5" : @"gAnswer 5"};
     
-    neutralAnswers = @{@"q1" : @"nAnswer 1", @"q2" : @"nAnswer 2", @"q3" : @"nAnswer 3", @"q4" : @"nAnswer 4", @"q5" : @"nAnswer 5"};
+    neutralAnswers = @{@"q1" : @"Ask for specifics", @"q2" : @"Won't risk my life", @"q3" : @"nAnswer 3", @"q4" : @"nAnswer 4", @"q5" : @"nAnswer 5"};
     
-    evilAnswers = @{@"q1" : @"eAnswer 1", @"q2" : @"eAnswer 2", @"q3" : @"eAnswer 3", @"q4" : @"eAnswer 4", @"q5" : @"eAnswer 5"};
+    evilAnswers = @{@"q1" : @"Accept", @"q2" : @"Will watch silently", @"q3" : @"eAnswer 3", @"q4" : @"eAnswer 4", @"q5" : @"eAnswer 5"};
 }
 
 - (void)createQuestionAndAnswers{
@@ -247,7 +247,7 @@ int numberOfMoralityQs;
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-    if ([segue.identifier isEqualToString:@"showCharacterCreation"]) {
+    if ([segue.identifier isEqualToString:@"showQCharacterCreation"]) {
         double roguePercentage = (chosenRogueAnswers/10.0)*100.0;
         double magePercentage = (chosenMageAnswers/10.0)*100.0;
         double berserkerPercentage = (chosenBerserkerAnswers/10.0)*100.0;

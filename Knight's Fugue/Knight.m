@@ -22,7 +22,7 @@
         self.healthLvl = knightDict[@"htLvl"];
         self.hitpointsLvl = knightDict[@"hpLvl"];
         self.willpowerLvl = knightDict[@"willLvl"];
-        self.perception = knightDict[@"perLvl"];
+        self.perceptionLvl = knightDict[@"perLvl"];
         self.fatigueLvl = knightDict[@"fatLvl"];
         self.moveLvl = knightDict[@"moveLvl"];
         self.speedLvl = knightDict[@"spdLvl"];
@@ -55,8 +55,8 @@
     if(self.hitpointsLvl == nil){
         self.hitpointsLvl = @0;
     }
-    if(self.perception== nil){
-        self.perception = @0;
+    if(self.perceptionLvl== nil){
+        self.perceptionLvl = @0;
     }
     if(self.moveLvl == nil){
         self.moveLvl = @0;
@@ -82,7 +82,7 @@
              @"htLvl": self.healthLvl,
              @"hpLvl": self.hitpointsLvl,
              @"fatLvl": self.fatigueLvl,
-             @"perLvl": self.perception,
+             @"perLvl": self.perceptionLvl,
              @"moveLvl": self.moveLvl,
              @"spdLvl": self.speedLvl,
              };
@@ -317,9 +317,15 @@
                              @"Zilocke", @"Zio", @"Zoru",
                              @"Zotar", @"Zutar", @"Zyten"];
     
-    int nameIndex = arc4random_uniform((int)[randomNames count]);
+    int firstNameIndex = arc4random_uniform((int)[randomNames count]);
+    int lastNameIndex = arc4random_uniform((int)[randomNames count]);
     
-    self.name = [randomNames objectAtIndex:nameIndex];
+    while(lastNameIndex == firstNameIndex){
+        lastNameIndex = arc4random_uniform((int)[randomNames count]);
+
+    }
+    
+    self.name = [NSString stringWithFormat:@"%@ %@",[randomNames objectAtIndex:firstNameIndex],[randomNames objectAtIndex:lastNameIndex]];
 }
 
 @end

@@ -20,7 +20,7 @@
 @property NSNumber *healthLvl;
 @property NSNumber *hitpointsLvl;
 @property NSNumber *willpowerLvl;
-@property NSNumber *perception;
+@property NSNumber *perceptionLvl;
 @property NSNumber *fatigueLvl;
 @property NSNumber *moveLvl;
 @property NSNumber *speedLvl;

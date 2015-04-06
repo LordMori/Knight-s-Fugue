@@ -13,9 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *moralityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *classLabel;
-@property (weak, nonatomic) IBOutlet UILabel *strengthLabel;
-@property (weak, nonatomic) IBOutlet UILabel *intelligenceLabel;
-@property (weak, nonatomic) IBOutlet UILabel *dexterityLabel;
 @property (weak, nonatomic) IBOutlet UILabel *descriptionLabel;
 
 @end
