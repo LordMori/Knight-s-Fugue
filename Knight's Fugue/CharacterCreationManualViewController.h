@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Connector.h"
 
 @interface CharacterCreationManualViewController : UIViewController
 

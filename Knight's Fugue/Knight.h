@@ -27,5 +27,6 @@
 
 - (id)initWithDictionary:(NSDictionary *)sgdDict;
 - (NSDictionary *)toDictionary;
+- (void)setRandomName;
 
 @end

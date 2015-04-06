@@ -15,20 +15,22 @@
 @implementation CharacterCreationOverviewViewController
 
 SavedGameData *sgd;
+Knight *knight;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.tabBarController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(popToRootView)];
-    self.tabBarController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create" style:UIBarButtonItemStylePlain target:self action:@selector(createNewGame)];
-    [Connector customizeBarButton:self.tabBarController.navigationItem.leftBarButtonItem];
-    [Connector customizeBarButton:self.tabBarController.navigationItem.rightBarButtonItem];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(popToRootView)];
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Create" style:UIBarButtonItemStylePlain target:self action:@selector(createNewGame)];
+    [Connector customizeBarButton:self.navigationItem.leftBarButtonItem];
+    [Connector customizeBarButton:self.navigationItem.rightBarButtonItem];
         
     [self hideDescriptionLabel];
     
     NSDictionary *sgdDict = [[NSUserDefaults standardUserDefaults] objectForKey:@"savedSGD"];
     sgd = [[SavedGameData alloc] initWithDictionary:sgdDict];
-    Knight *knight = [[Knight alloc] initWithDictionary:sgd.knight];
+    knight = [[Knight alloc] initWithDictionary:sgd.knight];
+    [knight setRandomName];
     //NSLog(@"Class: %@\nMorality: %@\nIntelligence: %@", knight.class, knight.morality, knight.intelligenceLvl);
     
     [self createLabelWithTapRecognizer:_classLabel labelText:[NSString stringWithFormat:@"Class: %@",[knight.class capitalizedString]]];
@@ -37,11 +39,18 @@ SavedGameData *sgd;
     [self createLabelWithTapRecognizer:_strengthLabel labelText:[NSString stringWithFormat:@"Strength: %@",knight.strengthLvl]];
     [self createLabelWithTapRecognizer:_intelligenceLabel labelText:[NSString stringWithFormat:@"Intelligence: %@",knight.intelligenceLvl]];
     [self createLabelWithTapRecognizer:_dexterityLabel labelText:[NSString stringWithFormat:@"Dexterity: %@",knight.dexterityLvl]];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updateNameFromCustom:) name:@"customNameEntered" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)updateNameFromCustom:(NSNotification*)note{
+    knight.name = note.object;
+    _nameLabel.text = [NSString stringWithFormat:@"Name: %@",knight.name];
 }
 
 - (void)createLabelWithTapRecognizer:(UILabel*)label labelText:(NSString*)text{
@@ -69,6 +78,35 @@ SavedGameData *sgd;
         [self presentDetailLabel:@"Class Details"];
     }else if([tappedLabel.text isEqualToString:_moralityLabel.text]){
         [self presentDetailLabel:@"Morality Details"];
+    }else if([tappedLabel.text isEqualToString:_nameLabel.text]){
+        UIAlertAction* cancel = [UIAlertAction
+                             actionWithTitle:@"Cancel"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [self dismissViewControllerAnimated:YES completion:nil];
+                             }];
+        UIAlertAction* newRandomName = [UIAlertAction
+                             actionWithTitle:@"New Random Name"
+                             style:UIAlertActionStyleDefault
+                             handler:^(UIAlertAction * action)
+                             {
+                                 [knight setRandomName];
+                                 _nameLabel.text = [NSString stringWithFormat:@"Name: %@",knight.name];
+                                 [self dismissViewControllerAnimated:YES completion:nil];
+                            }];
+        UIAlertAction* newCustomName = [UIAlertAction
+                                  actionWithTitle:@"New Custom Name"
+                                  style:UIAlertActionStyleDefault
+                                  handler:^(UIAlertAction * action)
+                                  {
+                                      [self dismissViewControllerAnimated:YES completion:nil];
+                                      [Connector createNameTextAlertController:self title:@"New Name" message:@""];
+                                      
+                                  }];
+        
+        NSArray *actions = @[newRandomName,newCustomName,cancel];
+        [Connector createCustomAlertController:self title:@"New Name?" message:@"Do you want to change your name?" actions:actions];
     }
     
     //NSLog(@"%@ Tapped",tappedLabel.text);
@@ -89,6 +127,7 @@ SavedGameData *sgd;
 }
 
 - (void)createNewGame {
+    sgd.knight = [knight toDictionary];
     [[NSUserDefaults standardUserDefaults] setBool:TRUE forKey:@"gameSaved"];
     [[NSUserDefaults standardUserDefaults] setObject:[sgd toDictionary] forKey:@"savedGame"];
 
@@ -96,7 +135,7 @@ SavedGameData *sgd;
 }
 
 - (void)popToRootView{
-    [Connector createAlertController:self title:@"Cancel Character Creation?" message:@"All data will be lost if cancelled"];
+    [Connector createCancelAlertController:self title:@"Cancel Character Creation?" message:@"All data will be lost if cancelled"];
 }
 
 @end

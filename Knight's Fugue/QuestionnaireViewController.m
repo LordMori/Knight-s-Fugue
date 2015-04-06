@@ -76,8 +76,9 @@ int numberOfMoralityQs;
     _questionLabel.text = @"Manual or Questionnaire?";
     [_answer1UI_B setTitle:@"Manual" forState:UIControlStateNormal];
     [_answer2UI_B setTitle:@"Questionnaire" forState:UIControlStateNormal];
-    _answer3UI_B.hidden = true;
+    [_answer3UI_B setTitle:@"Nothing Here..." forState:UIControlStateNormal];
     _answer3UI_B.enabled = false;
+    [_answer3UI_B setTitleColor:[UIColor clearColor] forState:UIControlStateNormal];
 }
 
 - (void)createQuestionAndAnswerDicts{
@@ -107,13 +108,13 @@ int numberOfMoralityQs;
     
     int qSelection = arc4random_uniform(100);
     
-    if(qSelection > 33){
+    if(qSelection > 40){
         if(numberOfClassQs<=10){
             numberOfClassQs++;
         }else{
             numberOfMoralityQs++;
         }
-    }else if(qSelection <= 33){
+    }else if(qSelection <= 40){
         if(numberOfMoralityQs<=5){
             numberOfMoralityQs++;
         }else{
@@ -123,7 +124,7 @@ int numberOfMoralityQs;
     
     NSLog(@"Number of class Qs: %d\nNumber of morality Qs: %d",numberOfClassQs,numberOfMoralityQs);
 
-    if((qSelection > 33 && numberOfClassQs <= 10 && numberOfMoralityQs != 6) || (numberOfMoralityQs > 5 && numberOfClassQs < 10)){
+    if((qSelection > 40 && numberOfClassQs <= 10 && numberOfMoralityQs != 6) || (numberOfMoralityQs > 5 && numberOfClassQs < 10)){
         int random = arc4random()%[classQuestionKeys count];
         NSString *key = [classQuestionKeys objectAtIndex:random];
         
@@ -140,12 +141,15 @@ int numberOfMoralityQs;
             if(!ans1Set){
                 [_answer1UI_B setTitle:[[ansArr objectAtIndex:index] objectForKey:key] forState:UIControlStateNormal];
                 ans1Set = true;
+                _answer1UI_B.hidden = false;
             }else if(!ans2Set){
                 [_answer2UI_B setTitle:[[ansArr objectAtIndex:index] objectForKey:key] forState:UIControlStateNormal];
                 ans2Set = true;
+                _answer2UI_B.hidden = false;
             }else if(!ans3Set){
                 [_answer3UI_B setTitle:[[ansArr objectAtIndex:index] objectForKey:key] forState:UIControlStateNormal];
                 ans3Set = true;
+                _answer3UI_B.hidden = false;
             }
             
             [ansArr removeObjectAtIndex:index];
@@ -153,7 +157,7 @@ int numberOfMoralityQs;
         
         [classQuestionKeys removeObject:key];
 
-    }else if((qSelection <= 33 && numberOfMoralityQs <= 5 && numberOfClassQs != 11) || (numberOfClassQs > 10 && numberOfMoralityQs < 5)){
+    }else if((qSelection <= 40 && numberOfMoralityQs <= 5 && numberOfClassQs != 11) || (numberOfClassQs > 10 && numberOfMoralityQs < 5)){
         int random = arc4random()%[moralityQuestionKeys count];
         NSString *key = [moralityQuestionKeys objectAtIndex:random];
         
@@ -170,12 +174,15 @@ int numberOfMoralityQs;
             if(!ans1Set){
                 [_answer1UI_B setTitle:[[ansArr objectAtIndex:index] objectForKey:key] forState:UIControlStateNormal];
                 ans1Set = true;
+                _answer1UI_B.hidden = false;
             }else if(!ans2Set){
                 [_answer2UI_B setTitle:[[ansArr objectAtIndex:index] objectForKey:key] forState:UIControlStateNormal];
                 ans2Set = true;
+                _answer2UI_B.hidden = false;
             }else if(!ans3Set){
                 [_answer3UI_B setTitle:[[ansArr objectAtIndex:index] objectForKey:key] forState:UIControlStateNormal];
                 ans3Set = true;
+                _answer3UI_B.hidden = false;
             }
             
             [ansArr removeObjectAtIndex:index];
@@ -184,14 +191,59 @@ int numberOfMoralityQs;
         [moralityQuestionKeys removeObject:key];
         
     }else if((numberOfClassQs > 10 && numberOfMoralityQs >= 5) || (numberOfClassQs >= 10 && numberOfMoralityQs > 5)){
-        [self performSegueWithIdentifier:@"showCharacterCreation" sender:self];
+        [self performSegueWithIdentifier:@"showQCharacterCreation" sender:self];
+    }
+}
+
+- (IBAction)answer1UI_A:(id)sender {
+    [self checkButton:_answer1UI_B];
+}
+
+- (IBAction)answer2UI_A:(id)sender {
+    [self checkButton:_answer2UI_B];
+}
+
+- (IBAction)answer3UI_A:(id)sender {
+    [self checkButton:_answer3UI_B];
+}
+
+- (void) checkButton: (UIButton*)button{
+    bool incremented = false;
+    
+    if([button.titleLabel.text isEqualToString:@"Manual"]){
+        [self performSegueWithIdentifier:@"showMCharacterCreation" sender:self];
+    }else if([button.titleLabel.text isEqualToString:@"Questionnaire"]){
+        [self createQuestionAndAnswers];
+        _answer3UI_B.enabled = true;
+        [_answer3UI_B setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        return;
     }
     
-    [NSThread sleepForTimeInterval:0.15f];
-    _answer1UI_B.hidden = false;
-    _answer2UI_B.hidden = false;
-    _answer3UI_B.hidden = false;
-    _answer3UI_B.enabled = true;
+    if([button.titleLabel.text isEqualToString:[rogueAnswers objectForKey:currentQuestion]]){
+        chosenRogueAnswers++;
+        incremented = true;
+    }else if([button.titleLabel.text isEqualToString:[mageAnswers objectForKey:currentQuestion]]){
+        chosenMageAnswers++;
+        incremented = true;
+    }else if([button.titleLabel.text isEqualToString:[berserkerAnswers objectForKey:currentQuestion]]){
+        chosenBerserkerAnswers++;
+        incremented = true;
+    }else if([button.titleLabel.text isEqualToString:[goodAnswers objectForKey:currentQuestion]]){
+        chosenGoodAnswers++;
+        incremented = true;
+    }else if([button.titleLabel.text isEqualToString:[neutralAnswers objectForKey:currentQuestion]]){
+        chosenNeutralAnswers++;
+        incremented = true;
+    }else if([button.titleLabel.text isEqualToString:[evilAnswers objectForKey:currentQuestion]]){
+        chosenEvilAnswers++;
+        incremented = true;
+    }
+    
+    if(incremented == true){
+        [self createQuestionAndAnswers];
+        [NSThread sleepForTimeInterval:0.15f];
+    }
+
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
@@ -205,9 +257,9 @@ int numberOfMoralityQs;
         double neutralPercentage = (chosenNeutralAnswers/5.0)*100.0;
         double evilPercentage = (chosenEvilAnswers/5.0)*100.0;
         NSString *moralityString = @"";
-                
+        
         NSLog(@"rogue: %f\nmage: %f\nberserker: %f\n\ngood: %f\nneutral: %f\nevil: %f",roguePercentage,magePercentage,berserkerPercentage,goodPercentage,neutralPercentage,evilPercentage);
-
+        
         if(roguePercentage == 40.0 || magePercentage == 40.0 || berserkerPercentage == 40.0){
             int random = arc4random()%2;
             
@@ -268,54 +320,6 @@ int numberOfMoralityQs;
     }
 }
 
-- (IBAction)answer1UI_A:(id)sender {
-    [self checkButton:_answer1UI_B];
-}
-
-- (IBAction)answer2UI_A:(id)sender {
-    [self checkButton:_answer2UI_B];
-}
-
-- (IBAction)answer3UI_A:(id)sender {
-    [self checkButton:_answer3UI_B];
-}
-
-- (void) checkButton: (UIButton*)button{
-    bool incremented = false;
-    
-    if([button.titleLabel.text isEqualToString:@"Manual"]){
-        NSLog(@"Manual Segue");
-    }else if([button.titleLabel.text isEqualToString:@"Questionnaire"]){
-        [self createQuestionAndAnswers];
-    }
-    
-    if([button.titleLabel.text isEqualToString:[rogueAnswers objectForKey:currentQuestion]]){
-        chosenRogueAnswers++;
-        incremented = true;
-    }else if([button.titleLabel.text isEqualToString:[mageAnswers objectForKey:currentQuestion]]){
-        chosenMageAnswers++;
-        incremented = true;
-    }else if([button.titleLabel.text isEqualToString:[berserkerAnswers objectForKey:currentQuestion]]){
-        chosenBerserkerAnswers++;
-        incremented = true;
-    }else if([button.titleLabel.text isEqualToString:[goodAnswers objectForKey:currentQuestion]]){
-        chosenGoodAnswers++;
-        incremented = true;
-    }else if([button.titleLabel.text isEqualToString:[neutralAnswers objectForKey:currentQuestion]]){
-        chosenNeutralAnswers++;
-        incremented = true;
-    }else if([button.titleLabel.text isEqualToString:[evilAnswers objectForKey:currentQuestion]]){
-        chosenEvilAnswers++;
-        incremented = true;
-    }
-    
-    if(incremented == true){
-        [self createQuestionAndAnswers];
-        [NSThread sleepForTimeInterval:0.15f];
-    }
-
-}
-
 - (void) saveGame:(NSString*)class morality:(NSString*)morality{
     SavedGameData *sgd = [[SavedGameData alloc] init];
     Knight *knight;
@@ -346,7 +350,7 @@ int numberOfMoralityQs;
 }
 
 - (void)popToRootView{
-    [Connector createAlertController:self title:@"Cancel Character Creation?" message:@"All data will be lost if cancelled"];
+    [Connector createCancelAlertController:self title:@"Cancel Character Creation?" message:@"All data will be lost if cancelled"];
 }
 
 @end

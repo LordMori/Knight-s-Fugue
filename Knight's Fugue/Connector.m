@@ -22,29 +22,23 @@
 
 
 
-+ (void)createAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message{
++ (void)createCancelAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message{
     UIAlertController * alert=   [UIAlertController
                                   alertControllerWithTitle:title
                                   message:message
                                   preferredStyle:UIAlertControllerStyleActionSheet];
-  
-//    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:title];
-//    [titleString addAttribute:NSFontAttributeName
-//                  value:[UIFont fontWithName:@"Alagard" size:20]
-//                  range:NSMakeRange(0, title.length)];
-//    [titleString addAttribute:NSForegroundColorAttributeName
-//                  value:[UIColor whiteColor]
-//                  range:NSMakeRange(0, title.length)];
-//    [alert setValue:titleString forKey:@"attributedTitle"];
-//    
-//    NSMutableAttributedString *messageString = [[NSMutableAttributedString alloc] initWithString:message];
-//    [messageString addAttribute:NSFontAttributeName
-//                        value:[UIFont fontWithName:@"Alagard" size:20]
-//                        range:NSMakeRange(0, message.length)];
-//    [messageString addAttribute:NSForegroundColorAttributeName
-//                        value:[UIColor whiteColor]
-//                        range:NSMakeRange(0, message.length)];
-//    [alert setValue:messageString forKey:@"attributedMessage"];
+    
+    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:title];
+    [titleString addAttribute:NSForegroundColorAttributeName
+                        value:[[vc view] tintColor]
+                        range:NSMakeRange(0, [title length])];
+    [alert setValue:titleString forKey:@"attributedTitle"];
+    
+    NSMutableAttributedString *messageString = [[NSMutableAttributedString alloc] initWithString:message];
+    [messageString addAttribute:NSForegroundColorAttributeName
+                        value:[[vc view] tintColor]
+                        range:NSMakeRange(0, [title length])];
+    [alert setValue:messageString forKey:@"attributedMessage"];
     
     UIAlertAction* cancel = [UIAlertAction
                              actionWithTitle:@"Cancel"
@@ -72,13 +66,109 @@
     
     [alert addAction:cancel];
     [alert addAction:ok];
+    
     UIView *subview = alert.view.subviews.firstObject;
     UIView *alertContentView = subview.subviews.firstObject;
-    alertContentView.backgroundColor = [[vc view] tintColor];
+    alertContentView.backgroundColor = [UIColor lightGrayColor];
+    
     alert.view.backgroundColor = [UIColor clearColor];
-    alert.view.tintColor = [UIColor whiteColor];
+    alert.view.tintColor = [[vc view] tintColor];
     
     [vc presentViewController:alert animated:YES completion:nil];
 }
+
++ (void)createCustomAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message actions:(NSArray*)actions{
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:title
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:title];
+    [titleString addAttribute:NSForegroundColorAttributeName
+                        value:[[vc view] tintColor]
+                        range:NSMakeRange(0, [title length])];
+    [alert setValue:titleString forKey:@"attributedTitle"];
+    
+    NSMutableAttributedString *messageString = [[NSMutableAttributedString alloc] initWithString:message];
+    [messageString addAttribute:NSForegroundColorAttributeName
+                          value:[[vc view] tintColor]
+                          range:NSMakeRange(0, [message length])];
+    [alert setValue:messageString forKey:@"attributedMessage"];
+    
+    UILabel * appearanceLabel = [UILabel appearanceWhenContainedIn:UIAlertController.class, nil];
+    [appearanceLabel setAppearanceFont:[UIFont fontWithName:@"Alagard" size:20]];
+    
+    for(UIAlertAction *action in actions){
+        [alert addAction:action];
+    }
+    
+    UIView *subview = alert.view.subviews.firstObject;
+    UIView *alertContentView = subview.subviews.firstObject;
+    alertContentView.backgroundColor = [UIColor lightGrayColor];
+    
+    alert.view.backgroundColor = [UIColor clearColor];
+    alert.view.tintColor = [[vc view] tintColor];
+    
+    [vc presentViewController:alert animated:YES completion:nil];
+}
+
++ (void)createNameTextAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message{
+    UIAlertController * alert=   [UIAlertController
+                                  alertControllerWithTitle:title
+                                  message:message
+                                  preferredStyle:UIAlertControllerStyleAlert];
+    
+    NSMutableAttributedString *titleString = [[NSMutableAttributedString alloc] initWithString:title];
+    [titleString addAttribute:NSForegroundColorAttributeName
+                        value:[[vc view] tintColor]
+                        range:NSMakeRange(0, [title length])];
+    [alert setValue:titleString forKey:@"attributedTitle"];
+    
+    NSMutableAttributedString *messageString = [[NSMutableAttributedString alloc] initWithString:message];
+    [messageString addAttribute:NSForegroundColorAttributeName
+                          value:[[vc view] tintColor]
+                          range:NSMakeRange(0, [message length])];
+    [alert setValue:messageString forKey:@"attributedMessage"];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField *textField)
+     {
+         textField.placeholder = @"Enter a new name";
+         textField.textAlignment = NSTextAlignmentCenter;
+         textField.font = [UIFont fontWithName:@"Alagard" size:20];
+         [textField setTextColor:[[vc view] tintColor]];
+         textField.keyboardAppearance = UIKeyboardAppearanceDark;
+     }];
+    
+    UIAlertAction *okAction = [UIAlertAction
+                               actionWithTitle:@"OK"
+                               style:UIAlertActionStyleDefault
+                               handler:^(UIAlertAction *action)
+                               {
+                                   UITextField *login = alert.textFields.firstObject;
+                                   if(login.text.length > 0){
+                                       [[NSNotificationCenter defaultCenter] postNotificationName:@"customNameEntered" object:login.text];
+                                       [alert dismissViewControllerAnimated:YES completion:nil];
+                                   }else{
+#warning Always dismisses alert
+                                       login.placeholder = @"Please enter a valid name";
+                                       //[vc presentViewController:alert animated:YES completion:nil];
+                                   }
+                               }];
+    
+    UILabel * appearanceLabel = [UILabel appearanceWhenContainedIn:UIAlertController.class, nil];
+    [appearanceLabel setAppearanceFont:[UIFont fontWithName:@"Alagard" size:20]];
+    
+    [alert addAction:okAction];
+    
+    UIView *subview = alert.view.subviews.firstObject;
+    UIView *alertContentView = subview.subviews.firstObject;
+    alertContentView.backgroundColor = [UIColor lightGrayColor];
+    
+    alert.view.backgroundColor = [UIColor clearColor];
+    alert.view.tintColor = [[vc view] tintColor];
+    
+    [vc presentViewController:alert animated:YES completion:nil];
+}
+
 
 @end

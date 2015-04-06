@@ -22,7 +22,7 @@
 		31B873E41AD0D9E2001A9B13 /* Planewalker.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31B873E21AD0D9E2001A9B13 /* Planewalker.otf */; };
 		31B873E61AD0EC7D001A9B13 /* alagard_by_pix3m.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 31B873E51AD0EC7D001A9B13 /* alagard_by_pix3m.ttf */; };
 		31ED558C1AD0F5A10081157E /* UILabel+ActionSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ED558B1AD0F5A10081157E /* UILabel+ActionSheet.m */; };
-		31FA00911AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00901AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m */; };
+		31ED558F1AD1B2E30081157E /* CharacterCreationManualViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31ED558E1AD1B2E30081157E /* CharacterCreationManualViewController.m */; };
 		31FA00951AC9FE9D0079A4E1 /* LoadSaveGameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA00941AC9FE9D0079A4E1 /* LoadSaveGameViewController.m */; };
 		31FA009C1ACA2A590079A4E1 /* BerserkerClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA009B1ACA2A590079A4E1 /* BerserkerClass.m */; };
 		31FA009F1ACA33500079A4E1 /* MageClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 31FA009E1ACA33500079A4E1 /* MageClass.m */; };
@@ -58,8 +58,8 @@
 		31B873E51AD0EC7D001A9B13 /* alagard_by_pix3m.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = alagard_by_pix3m.ttf; sourceTree = "<group>"; };
 		31ED558A1AD0F5A10081157E /* UILabel+ActionSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+ActionSheet.h"; sourceTree = "<group>"; };
 		31ED558B1AD0F5A10081157E /* UILabel+ActionSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+ActionSheet.m"; sourceTree = "<group>"; };
-		31FA008F1AC9F7A20079A4E1 /* CharacterCreationStatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationStatsViewController.h; sourceTree = "<group>"; };
-		31FA00901AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationStatsViewController.m; sourceTree = "<group>"; };
+		31ED558D1AD1B2E30081157E /* CharacterCreationManualViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterCreationManualViewController.h; sourceTree = "<group>"; };
+		31ED558E1AD1B2E30081157E /* CharacterCreationManualViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterCreationManualViewController.m; sourceTree = "<group>"; };
 		31FA00931AC9FE9D0079A4E1 /* LoadSaveGameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadSaveGameViewController.h; sourceTree = "<group>"; };
 		31FA00941AC9FE9D0079A4E1 /* LoadSaveGameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadSaveGameViewController.m; sourceTree = "<group>"; };
 		31FA009A1ACA2A590079A4E1 /* BerserkerClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BerserkerClass.h; sourceTree = "<group>"; };
@@ -179,8 +179,8 @@
 			children = (
 				31858DC51AC0D71000426C57 /* CharacterCreationOverviewViewController.h */,
 				31858DC61AC0D71000426C57 /* CharacterCreationOverviewViewController.m */,
-				31FA008F1AC9F7A20079A4E1 /* CharacterCreationStatsViewController.h */,
-				31FA00901AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m */,
+				31ED558D1AD1B2E30081157E /* CharacterCreationManualViewController.h */,
+				31ED558E1AD1B2E30081157E /* CharacterCreationManualViewController.m */,
 			);
 			name = CharacterCreation;
 			sourceTree = "<group>";
@@ -275,13 +275,13 @@
 				313FC4B81AC4FA80007B58E1 /* Knight.m in Sources */,
 				31FA00951AC9FE9D0079A4E1 /* LoadSaveGameViewController.m in Sources */,
 				31858DC41AC0C90200426C57 /* QuestionnaireViewController.m in Sources */,
-				31FA00911AC9F7A20079A4E1 /* CharacterCreationStatsViewController.m in Sources */,
 				313FC4B51AC4F385007B58E1 /* SavedGameData.m in Sources */,
 				31ED558C1AD0F5A10081157E /* UILabel+ActionSheet.m in Sources */,
 				31858D9F1AC0C46000426C57 /* main.m in Sources */,
 				31FA009C1ACA2A590079A4E1 /* BerserkerClass.m in Sources */,
 				31B873E01AD0D9CF001A9B13 /* RogueClass.m in Sources */,
 				31FA00A51ACA34220079A4E1 /* WarriorClass.m in Sources */,
+				31ED558F1AD1B2E30081157E /* CharacterCreationManualViewController.m in Sources */,
 				31858DC71AC0D71000426C57 /* CharacterCreationOverviewViewController.m in Sources */,
 				31FA00A21ACA340A0079A4E1 /* AssassinClass.m in Sources */,
 			);

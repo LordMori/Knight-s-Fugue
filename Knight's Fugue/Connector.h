@@ -21,5 +21,7 @@
 @interface Connector : NSObject
 
 + (void)customizeBarButton:(UIBarButtonItem*)bbt;
-+ (void)createAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message;
++ (void)createCancelAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message;
++ (void)createCustomAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message actions:(NSArray*)actions;
++ (void)createNameTextAlertController:(UIViewController*)vc title:(NSString*)title message:(NSString*)message;
 @end
